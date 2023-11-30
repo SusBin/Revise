@@ -1,0 +1,14 @@
+﻿@page
+@model QuestionModel
+@{
+}
+
+@foreach (var question in Model.Questions)
+{
+    <p>@question.Question</p>
+    <p>@question.Answer</p>
+    <a href="/Question/Edit/@question.Id">
+        <button>Edit</button>
+    </a>
+
+}

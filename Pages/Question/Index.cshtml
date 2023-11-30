@@ -1,0 +1,14 @@
+﻿@page
+@model Revise.Pages.Question.IndexModel
+@{
+}
+Index
+<a href="Question/Create">
+    <button>Add New Question</button>
+</a>
+
+@foreach (var topic in Model.Topics)
+{
+    <p><a href="/Question/View?topic=@topic">@topic</a></p>
+}
+

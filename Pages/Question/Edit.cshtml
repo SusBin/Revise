@@ -1,0 +1,18 @@
+﻿@page "{id:int}"
+@model Revise.Pages.Question.EditModel
+@{
+}
+<form method="post">
+    <input type="hidden" name="Question.Id" value="@Model.Question.Id" />
+
+    <label for="question">Question:</label>
+    <input id="question" name="Question.Question" value="@Model.Question.Question" />
+
+    <label for="answer">Answer:</label>
+    <input id="answer" name="Question.Answer" value="@Model.Question.Answer" />
+
+    <label for="topic">Topic:</label>
+    <input id="topic" name="Question.Topic" value="@Model.Question.Topic" />
+
+    <button type="submit">Update Question</button>
+</form>
