@@ -2,13 +2,28 @@
 @model Revise.Pages.Question.IndexModel
 @{
 }
-Index
-<a href="Question/Create">
-    <button>Add New Question</button>
-</a>
 
-@foreach (var topic in Model.Topics)
-{
-    <p><a href="/Question/View?topic=@topic">@topic</a></p>
-}
+<div class="container">
+    <h1>Topics</h1>
 
+    <div class="row">
+        @foreach (var topic in Model.Topics)
+        {
+            <div class="col-sm-4">
+                <a href="/Question/View?topic=@topic" class="card-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@topic</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+        <a href="Question/Create" class="btn btn-primary">Add New Question</a>
+        </div>
+    </div>
+</div>

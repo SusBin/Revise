@@ -2,15 +2,17 @@
 @model Revise.Pages.Question.CreateModel
 @{
 }
-<form method="post">
-    <label for="question">Question:</label>
-    <input id="question" name="NewQuestion.Question" />
+<div class="container">
+    <form method="post">
+        <label for="question">Question:</label>
+        <input id="question" name="NewQuestion.Question" />
 
-    <label for="answer">Answer:</label>
-    <input id="answer" name="NewQuestion.Answer" />
+        <label for="answer">Answer:</label>
+        <input id="answer" name="NewQuestion.Answer" />
 
-    <label for="topic">Topic:</label>
-    <input id="topic" name="NewQuestion.Topic" />
+        <label for="topic">Topic:</label>
+        <input id="topic" name="NewQuestion.Topic" />
 
-    <button type="submit">Add Question</button>
-</form>
+        <button type="submit">Add Question</button>
+    </form>
+</div>  

@@ -8,8 +8,16 @@
     <label for="question">Question:</label>
     <input id="question" name="Question.Question" value="@Model.Question.Question" />
 
-    <label for="answer">Answer:</label>
-    <input id="answer" name="Question.Answer" value="@Model.Question.Answer" />
+    @for (int i = 0; i < Model.Question.Answers.Count; i++)
+    {
+        <div>
+            <label for="answer">Answer @i:</label>
+            <input id="answer" name="Question.Answers[@i].Text" value="@Model.Question.Answers[i].Text" />
+            <label for="isCorrect">Is Correct:</label>
+            <input type="checkbox" id="isCorrect" name="Question.Answers[@i].IsCorrect" value="true" @(Model.Question.Answers[i].IsCorrect ? "checked" : "") />
+        </div>
+    }
+
 
     <label for="topic">Topic:</label>
     <input id="topic" name="Question.Topic" value="@Model.Question.Topic" />
