@@ -1,8 +1,10 @@
 ﻿@page
 @model QuestionModel
 @{
-}
+    var topicName = Request.Query["topic"];
 
+}
+<a class="btn btn-primary" asp-page="/Question/Create" asp-route-id="@Model.CourseId" asp-route-topic="@topicName">Add a new question</a>
 <div class="container">
     @foreach (var question in Model.Questions)
     {

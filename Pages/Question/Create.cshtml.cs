@@ -9,33 +9,53 @@ namespace Revise.Pages.Question
     public class CreateModel : PageModel
     {
         private readonly QuestionService _questionService;
-        public List<string> Topics { get; set; }
+        [BindProperty]
+        public StudyTopic Topic { get; set; }
         [BindProperty]
         public Revise.Models.Course Course { get; set; }
         [BindProperty]
-        public RevisionQuestion RevisionQuestion { get; set; }
+        public List<string> Topics { get; private set; }
         [BindProperty]
-        public string TopicName { get; set; }
-
+        public string CourseCode { get; private set; }
+        [BindProperty]
+        public string CourseName { get; private set; }
+                
         public CreateModel(QuestionService questionService)
         {
             _questionService = questionService;
         }
 
-        public IActionResult OnGet(int id)
+        public IActionResult OnGet(int id, string topic)
         {
             Course = _questionService.GetCourseById(id);
+            Topics = _questionService.GetTopicsByCourseId(id);
+            CourseCode = Course.CourseCode;
+            CourseName = Course.CourseName;
             if (Course == null)
             {
                 TempData["ErrorMessage"] = "No Courses were found with that ID.";
                 return RedirectToPage("/Error");
             }
-            Topics = _questionService.GetTopicsByCourseId(id);
+            Topic = _questionService.GetStudyTopic(id, topic);
             return Page();
         }
 
-        public IActionResult OnPost(int courseId, string topicName)
+        public IActionResult OnPost(int courseId)
         {
+            if (!ModelState.IsValid)
+            {
+                var errorMessages = new List<string>();
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        errorMessages.Add(error.ErrorMessage);
+                    }
+                }
+                TempData["ErrorMessage"] = string.Join(", ", errorMessages);
+                return RedirectToPage("/Error");
+            }
+
             try
             {
                 var courses = new List<Revise.Models.Course>();
@@ -45,28 +65,21 @@ namespace Revise.Pages.Question
                     courses = JsonSerializer.Deserialize<List<Revise.Models.Course>>(json);
                 }
 
-                var course = courses.FirstOrDefault(c => c.Id == courseId);
-                if (course == null)
-                {
-                    throw new Exception("Course not found.");
-                }
+                var course = _questionService.GetCourseById(courseId) ?? throw new Exception("Course not found.");
 
-                var topic = course.Topics.FirstOrDefault(t => t.Topic == TopicName);
-                if (topic == null)
-                {
-                    // If the topic is not found, create a new one
-                    topic = new StudyTopic { Topic = TopicName, Questions = new List<RevisionQuestion>() };
-                    course.Topics.Add(topic);
-                }
+                // Create a new question
+                var newQuestion = new RevisionQuestion();
 
                 // Auto-generate the Id field
-                RevisionQuestion.Id = topic.Questions.Any() ? topic.Questions.Max(q => q.Id) + 1 : 1;
+                newQuestion.Id = Topic.Questions.Any() ? Topic.Questions.Max(q => q.Id) + 1 : 1;
 
-                topic.Questions.Add(RevisionQuestion);
+                // Add the new question to the Questions list
+                Topic.Questions.Add(newQuestion);
+
                 var newJson = JsonSerializer.Serialize(courses);
                 System.IO.File.WriteAllText("questions.json", newJson);
 
-                return RedirectToPage("/Success");
+                return RedirectToPage("/Index");
             }
             catch (Exception ex)
             {

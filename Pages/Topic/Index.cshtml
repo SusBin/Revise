@@ -1,5 +1,5 @@
 ﻿@page "{id:int}"
-@model Revise.Pages.Question.IndexModel
+@model Revise.Pages.Topic.IndexModel
 @{
     var courseId = Convert.ToInt32(RouteData.Values["id"]);
 }
@@ -24,7 +24,7 @@
     </div>
     <div class="row">
         <div class="col-md-3">
-        <a href="../Create/@courseId" class="btn btn-primary">Add New Question</a>
+        <a href="../Create/@courseId" class="btn btn-primary">Add New Topic</a>
         </div>
     </div>
 </div>

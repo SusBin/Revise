@@ -50,7 +50,6 @@
                 "IsCorrect": true
               }
             ]
-
           },
           {
             "Id": 6,
@@ -101,7 +100,6 @@
       {
         "Topic": "Complexity",
         "Questions": [
-
           {
             "Id": 8,
             "Question": "complexity of: n log n \u002B 5 log n \u002B 3n \u002B 5",
@@ -252,10 +250,13 @@
               }
             ]
           }
-
+        ]
+      },
+      {
+        "Topic": "Stacks (with arrays)",
+        "Questions": [
         ]
       }
-
     ]
   }
 ]

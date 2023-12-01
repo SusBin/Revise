@@ -1,0 +1,20 @@
+﻿@page "{id:int}"
+@model Revise.Pages.Topic.CreateModel
+@{
+    var courseId = Convert.ToInt32(RouteData.Values["id"]);
+}
+
+<form method="post">
+    <div class="row">
+        <label for="courseName">Course Name:</label>
+        <input id="courseName" name="Course.CourseName" value="@Model.Course.CourseName" readonly />
+    </div>
+    <div class="row">
+        <label for="newTopicName">New Topic Name:</label>
+        <input id="newTopicName" name="NewTopicName" />
+    </div>
+    <div class="row">
+        <input type="hidden" id="courseID" name="courseId" value="@courseId" />
+        <button type="submit">Add Topic</button>
+    </div>
+</form>

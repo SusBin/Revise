@@ -3,44 +3,29 @@
 @{
     var courseId = Convert.ToInt32(RouteData.Values["id"]);
 }
-
+<h1>@Model.Course.CourseName</h1>
+<h2>Create Question topic: @Model.Topic.Topic</h2>
 <form method="post">
     <input type="hidden" name="courseId" value="@Model.Course.Id" />
-    
-      <div class="row">
-        <label for="courseName">Course Name:</label>
-        <input id="courseName" name="Course.CourseName" value="@Model.Course.CourseName" readonly />
-    </div>
-    <div class="row">
-        <label for="topicName">Topic Name:</label>
-        <select id="topicName" name="RevisionQuestion.TopicName">
-            @foreach (var topic in Model.Topics)
-            {
-                <option value="@topic">@topic</option>
-            }
-            <option value="other">Other</option>
-        </select>
-
-        <div id="newTopicField" style="display: none;">
-            <label for="newTopicName">New Topic Name:</label>
-            <input id="newTopicName" name="Model.NewTopicName" />
-        </div>
-    </div>
+    <input type="hidden" name="Topic.Topic" value="@Model.Topic.Topic" />
+    <input type="hidden" name="Topics" value="@Model.Topics" />
+    <input type="hidden" name="CourseName" value="@Model.CourseName" />
+    <input type="hidden" name="CourseCode" value="@Model.CourseCode" />
     <div class="row">
         <label for="question">Question:</label>
-        <input id="question" name="RevisionQuestion.Question" />
+        <input id="question" name="Topic.Questions[0].Question" />
     </div>
     <div class="row">
         <label for="answers">Answers:</label>
         <div id="answerFields">
             <div class="answerField">
-                <input class="answer" name="RevisionQuestion.Answers[0].Text" />
-                <input type="checkbox" class="isCorrect" name="RevisionQuestion.Answers[0].IsCorrect" /> Correct
+                <input class="answer" name="Topic.Questions[0].Answers[0].Text" />
+                <input type="checkbox" class="isCorrect" name="Topic.Questions[0].Answers[0].IsCorrect" /> Correct
             </div>
-        </div>        
+        </div>
     </div>
     <button type="button" id="addAnswer">Add another answer</button>
-    <div class="row">
+    <div class="row">        
         <button type="submit">Add Question</button>
     </div>
 </form>
@@ -48,18 +33,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#topicName').change(function () {
-            if ($(this).val() == 'other') {
-                $('#newTopicField').show();
-            } else {
-                $('#newTopicField').hide();
-            }
-        });
-
         var answerIndex = 1;
         $('#addAnswer').click(function () {
-            $('#answerFields').append('<div class="answerField"><input class="answer" name="RevisionQuestion.Answers[' + answerIndex + '].Text" /><input type="checkbox" class="isCorrect" name="RevisionQuestion.Answers[' + answerIndex + '].IsCorrect" /> Correct</div>');
+            $('#answerFields').append('<div class="answerField"><input class="answer" name="Topic.Questions[0].Answers[' + answerIndex + '].Text" /><input type="checkbox" class="isCorrect" onchange="updateCheckboxValue(this)" /><input type="hidden" name="Topic.Questions[0].Answers[' + answerIndex + '].IsCorrect" value="false" /> Correct</div>');
             answerIndex++;
         });
     });
+
+    function updateCheckboxValue(checkbox) {
+        $(checkbox).next().val(checkbox.checked ? 'true' : 'false');
+    }
+
+
 </script>

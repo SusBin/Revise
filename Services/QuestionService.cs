@@ -28,6 +28,10 @@ namespace Revise.Services
                            .Distinct()
                            .ToList();
         }
+        public int GetCourseIdbyTopic(string topicName)
+        {
+            return (int)(_courses.FirstOrDefault(c => c.Topics.Any(t => t.Topic == topicName))?.Id);
+        }
 
         public RevisionQuestion GetQuestionById(int courseId, string topicName, int id)
         {
@@ -50,6 +54,12 @@ namespace Revise.Services
             return course?.Topics.Select(t => t.Topic).ToList();
         }
 
+        public StudyTopic GetStudyTopic(int courseId, string topicName)
+        {
+            var course = GetCourseById(courseId);
+            return course?.Topics.FirstOrDefault(t => t.Topic == topicName);
+        }
+
         public void UpdateQuestion(int courseId, string topicName, RevisionQuestion updatedQuestion)
         {
             var course = _courses.FirstOrDefault(c => c.Id == courseId);
@@ -68,5 +78,24 @@ namespace Revise.Services
                 }
             }
         }
+
+        public void AddNewTopic(int courseId, string topicName)
+        {
+            var course = GetCourseById(courseId);
+            if (course != null)
+            {
+                var topic = course.Topics.FirstOrDefault(t => t.Topic == topicName);
+                if (topic == null)
+                {
+                    // If the topic is not found, create a new one
+                    topic = new StudyTopic { Topic = topicName, Questions = new List<RevisionQuestion>() };
+                    course.Topics.Add(topic);
+                    var newJson = JsonSerializer.Serialize(_courses);
+                    System.IO.File.WriteAllText("questions.json", newJson);
+                }
+            }
+        }
+
+
     }
 }

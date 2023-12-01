@@ -15,9 +15,10 @@ namespace Revise.Pages.Question
         }
 
         public List<RevisionQuestion> Questions { get; set; }
-
+        public int CourseId { get; set; }
         public void OnGet(string topic)
         {
+            CourseId = _questionService.GetCourseIdbyTopic(topic);
             Questions = _questionService.GetQuestionsByTopic(topic);
         }
     }

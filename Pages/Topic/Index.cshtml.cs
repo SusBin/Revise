@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Revise.Services;
 
-namespace Revise.Pages.Question
+namespace Revise.Pages.Topic
 {
 
     public class IndexModel : PageModel
