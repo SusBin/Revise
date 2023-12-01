@@ -1,18 +1,65 @@
-﻿@page
+﻿@page "{id:int}"
 @model Revise.Pages.Question.CreateModel
 @{
+    var courseId = Convert.ToInt32(RouteData.Values["id"]);
 }
-<div class="container">
-    <form method="post">
+
+<form method="post">
+    <input type="hidden" name="courseId" value="@Model.Course.Id" />
+    
+      <div class="row">
+        <label for="courseName">Course Name:</label>
+        <input id="courseName" name="Course.CourseName" value="@Model.Course.CourseName" readonly />
+    </div>
+    <div class="row">
+        <label for="topicName">Topic Name:</label>
+        <select id="topicName" name="RevisionQuestion.TopicName">
+            @foreach (var topic in Model.Topics)
+            {
+                <option value="@topic">@topic</option>
+            }
+            <option value="other">Other</option>
+        </select>
+
+        <div id="newTopicField" style="display: none;">
+            <label for="newTopicName">New Topic Name:</label>
+            <input id="newTopicName" name="Model.NewTopicName" />
+        </div>
+    </div>
+    <div class="row">
         <label for="question">Question:</label>
-        <input id="question" name="NewQuestion.Question" />
-
-        <label for="answer">Answer:</label>
-        <input id="answer" name="NewQuestion.Answer" />
-
-        <label for="topic">Topic:</label>
-        <input id="topic" name="NewQuestion.Topic" />
-
+        <input id="question" name="RevisionQuestion.Question" />
+    </div>
+    <div class="row">
+        <label for="answers">Answers:</label>
+        <div id="answerFields">
+            <div class="answerField">
+                <input class="answer" name="RevisionQuestion.Answers[0].Text" />
+                <input type="checkbox" class="isCorrect" name="RevisionQuestion.Answers[0].IsCorrect" /> Correct
+            </div>
+        </div>        
+    </div>
+    <button type="button" id="addAnswer">Add another answer</button>
+    <div class="row">
         <button type="submit">Add Question</button>
-    </form>
-</div>  
+    </div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#topicName').change(function () {
+            if ($(this).val() == 'other') {
+                $('#newTopicField').show();
+            } else {
+                $('#newTopicField').hide();
+            }
+        });
+
+        var answerIndex = 1;
+        $('#addAnswer').click(function () {
+            $('#answerFields').append('<div class="answerField"><input class="answer" name="RevisionQuestion.Answers[' + answerIndex + '].Text" /><input type="checkbox" class="isCorrect" name="RevisionQuestion.Answers[' + answerIndex + '].IsCorrect" /> Correct</div>');
+            answerIndex++;
+        });
+    });
+</script>

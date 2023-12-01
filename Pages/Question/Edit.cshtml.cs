@@ -10,18 +10,21 @@ namespace Revise.Pages.Question
         private QuestionService _questionService;
         [BindProperty]
         public RevisionQuestion Question { get; set; }
+        [BindProperty]
+        public string TopicName { get; set; }
 
         public EditModel(QuestionService questionService)
         {
             _questionService = questionService;
         }
 
-        public void OnGet(int id)
+        public void OnGet(int courseId, string topicName, int id)
         {
-            Question = _questionService.GetQuestionById(id);
+            Question = _questionService.GetQuestionById(courseId, topicName, id);
+            TopicName = topicName;
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(int courseId, string topicName)
         {
             if (!ModelState.IsValid)
             {
@@ -36,7 +39,7 @@ namespace Revise.Pages.Question
                 }
             }
 
-            _questionService.UpdateQuestion(Question);
+            _questionService.UpdateQuestion(courseId, topicName, Question);
 
             return RedirectToPage("./Index"); // Redirect to another page after successful update
         }
