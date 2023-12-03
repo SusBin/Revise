@@ -733,7 +733,1414 @@
             ]
           }
         ]
+      },
+      {
+        "Topic": "Linked list operations",
+        "Questions": [
+          {
+            "Id": 39,
+            "Question": "What is the complexity of accessing the last element of a linked list?",
+            "Answers": [
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 40,
+            "Question": "What is the complexity of accessing the first element of a linked list?",
+            "Answers": [
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(1)",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 41,
+            "Question": "What is the complexity of inserting a node at the tail of a list?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 42,
+            "Question": "Select the correct constructor for a linked list Node",
+            "Answers": [
+              {
+                "Text": "public Node(int i) {\n\tvalue = i;\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public Node(int i) {\n\tnew Node(i);\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public Node(int i) {\n\tvalue = i;\n\tnextNode = null;\n}",
+                "IsCorrect": true
+              },
+              {
+                "Text": "public Node(int i) {\n\tvalue = i;\n\tnextNode = head;\n}",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 43,
+            "Question": "Select the recursive implementation of adding a Node at the tail of linked list?",
+            "Answers": [
+              {
+                "Text": "public void addNodeAtTail(Node n) {\n\thead.nextNode(n);\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public void addNodeAtTail(Node n) {\n\tthis.nextNode.addNodeAtTail(n);\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public void addNodeAtTail(Node n) {\n\tthis.nextNode = n;\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public void addNodeAtTail(Node n) {\n\tif (this.nextNode == null) {\n\t\tthis.nextNode = n;\n\t} else {\n\t\tthis.nextNode.addNodeAtTail(n);\n\t}\n}",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 44,
+            "Question": "Select the correct implementation of adding an integer to the head of a linked list",
+            "Answers": [
+              {
+                "Text": "public void addAtHead(int i) {\n\tnewNode.setNextNode(i);\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public void addAtHead(int i) {\n\tNode newNode = new Node(i);\n\tnewNode.setNextNode(headNode);\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public void addAtHead(int i) {\n\tNode newNode = new Node(i);\n\tnewNode.setNextNode(headNode);\n\theadNode = newNode;\n}",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Stacks (with linked lists)",
+        "Questions": [
+          {
+            "Id": 45,
+            "Question": "Select the operations in the Stack interface",
+            "Answers": [
+              {
+                "Text": "pop",
+                "IsCorrect": true
+              },
+              {
+                "Text": "removeFromTail",
+                "IsCorrect": false
+              },
+              {
+                "Text": "top",
+                "IsCorrect": true
+              },
+              {
+                "Text": "push",
+                "IsCorrect": true
+              },
+              {
+                "Text": "addToTail",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 46,
+            "Question": "Advantage of linked lists",
+            "Answers": [
+              {
+                "Text": "Random access to any element",
+                "IsCorrect": false
+              },
+              {
+                "Text": "They can dynamically grow and shrink",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 47,
+            "Question": "Select O(1) operations on singly linked lists",
+            "Answers": [
+              {
+                "Text": "addAtTail",
+                "IsCorrect": false
+              },
+              {
+                "Text": "addAtHead",
+                "IsCorrect": true
+              },
+              {
+                "Text": "removeFromHead",
+                "IsCorrect": true
+              },
+              {
+                "Text": "removeFromTail",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 48,
+            "Question": "For time efficiency, where should stack operations update a linked list?",
+            "Answers": [
+              {
+                "Text": "Tail of the list",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Middle of the list",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Head of the list",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 49,
+            "Question": "If headNode points to null, what should pop() return?",
+            "Answers": [
+              {
+                "Text": "void",
+                "IsCorrect": false
+              },
+              {
+                "Text": "true",
+                "IsCorrect": false
+              },
+              {
+                "Text": "StackException",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 50,
+            "Question": "If top() is called, how many object references change?",
+            "Answers": [
+              {
+                "Text": "0",
+                "IsCorrect": true
+              },
+              {
+                "Text": "1",
+                "IsCorrect": false
+              },
+              {
+                "Text": "2",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 51,
+            "Question": "If push() is called, how many object references change?",
+            "Answers": [
+              {
+                "Text": "0",
+                "IsCorrect": false
+              },
+              {
+                "Text": "1",
+                "IsCorrect": false
+              },
+              {
+                "Text": "2",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Queues",
+        "Questions": [
+          {
+            "Id": 52,
+            "Question": "A queue is a",
+            "Answers": [
+              {
+                "Text": "LIFO",
+                "IsCorrect": false
+              },
+              {
+                "Text": "FIFO",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 53,
+            "Question": "Select all valid operations on queues",
+            "Answers": [
+              {
+                "Text": "pop",
+                "IsCorrect": false
+              },
+              {
+                "Text": "enqueue",
+                "IsCorrect": true
+              },
+              {
+                "Text": "front",
+                "IsCorrect": true
+              },
+              {
+                "Text": "push",
+                "IsCorrect": false
+              },
+              {
+                "Text": "dequeue",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 54,
+            "Question": "Which queue implementation may throw a QueueException for a call to enqueue(object)?",
+            "Answers": [
+              {
+                "Text": "Linked list",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Array",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 55,
+            "Question": "With a queue implemented with wrap-around arrays, what is the size?",
+            "Answers": [
+              {
+                "Text": "f % capacity",
+                "IsCorrect": false
+              },
+              {
+                "Text": "(f - r) % capacity",
+                "IsCorrect": false
+              },
+              {
+                "Text": "(capacity - f + r) % capacity",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 56,
+            "Question": "What are the complexities of array based queue operations?",
+            "Answers": [
+              {
+                "Text": "enqueue - O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "enqueue - O(1)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "front - O(N^2)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "front - O(1)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "dequeue - O(1)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "dequeue - O(N)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 57,
+            "Question": "What happens to the head object reference calling dequeue() on a linked list based queue implementation?",
+            "Answers": [
+              {
+                "Text": "head = null;",
+                "IsCorrect": false
+              },
+              {
+                "Text": "head = head.next;",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 58,
+            "Question": "For a linked list implementation of a queue, what happens to the tail object reference if dequeue() is performed on a 1 element queue?",
+            "Answers": [
+              {
+                "Text": "tail = null;",
+                "IsCorrect": true
+              },
+              {
+                "Text": "tail = tail.next;",
+                "IsCorrect": false
+              },
+              {
+                "Text": "tail remains unchanged",
+                "IsCorrect": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Doubly linked lists",
+        "Questions": [
+          {
+            "Id": 59,
+            "Question": "In a doubly linked list, how many object references does each node contain?",
+            "Answers": [
+              {
+                "Text": "1",
+                "IsCorrect": false
+              },
+              {
+                "Text": "2",
+                "IsCorrect": true
+              },
+              {
+                "Text": "3",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 60,
+            "Question": "Select any global object references that occur in a doubly linked list",
+            "Answers": [
+              {
+                "Text": "headNode",
+                "IsCorrect": true
+              },
+              {
+                "Text": "tailNode",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 61,
+            "Question": "In a singly linked list, how many object references does each node contain?",
+            "Answers": [
+              {
+                "Text": "1",
+                "IsCorrect": true
+              },
+              {
+                "Text": "2",
+                "IsCorrect": false
+              },
+              {
+                "Text": "3",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 62,
+            "Question": "Select a sensible Node constructor for a doubly linked list",
+            "Answers": [
+              {
+                "Text": "public Node(Object val){\n\tvalue = val;\n\tnextNode = null;\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public Node(Object val){\n\tvalue = val;\n\tnextNode = null;\n\tprevNode = null;\n}",
+                "IsCorrect": true
+              },
+              {
+                "Text": "public Node(Object val){\n\tvalue = val;\n}",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 63,
+            "Question": "If adding an element to the head of an empty doubly linked list, what should tailNode point to?",
+            "Answers": [
+              {
+                "Text": "null",
+                "IsCorrect": false
+              },
+              {
+                "Text": "it should remain unchanged",
+                "IsCorrect": false
+              },
+              {
+                "Text": "the new node",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 64,
+            "Question": "If deleting from the tail of a single element doubly linked list, what should headNode point to?",
+            "Answers": [
+              {
+                "Text": "it should remain unchanged",
+                "IsCorrect": false
+              },
+              {
+                "Text": "the head node's next node",
+                "IsCorrect": false
+              },
+              {
+                "Text": "null",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Search",
+        "Questions": [
+          {
+            "Id": 65,
+            "Question": "Linear search can be performed on arrays",
+            "Answers": [
+              {
+                "Text": "True",
+                "IsCorrect": true
+              },
+              {
+                "Text": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 66,
+            "Question": "Linear search can be performed on linked lists",
+            "Answers": [
+              {
+                "Text": "True",
+                "IsCorrect": true
+              },
+              {
+                "Text": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 67,
+            "Question": "Binary search can be performed on arrays",
+            "Answers": [
+              {
+                "Text": "True",
+                "IsCorrect": true
+              },
+              {
+                "Text": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 68,
+            "Question": "Binary search can be performed on linked lists",
+            "Answers": [
+              {
+                "Text": "False",
+                "IsCorrect": true
+              },
+              {
+                "Text": "True",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 69,
+            "Question": "What is this code doing:\nfor(int i = 0; i < ar.length; i++){\nif(ar[i] == number)\nreturn true;\n}\nreturn false;",
+            "Answers": [
+              {
+                "Text": "Binary search on an array",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Binary search on a linked list",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Linear search on an array",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Linear search on a linked list",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 70,
+            "Question": "What is this code doing:\nNode curr = headNode;\nwhile (curr != null){\nif(curr.getValue() == number)\nreturn true;\ncur = curr.getNextNode();\n}\nreturn false",
+            "Answers": [
+              {
+                "Text": "Binary search on an array",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Binary search on a linked list",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Linear search on an array",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Linear search on a linked list",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 71,
+            "Question": "In order for binary search to work, which one property must hold?",
+            "Answers": [
+              {
+                "Text": "The data must be integers",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The search complexity must be less than O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The value being searched must exist in the data",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The data must be ordered",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 72,
+            "Question": "What is the worst case complexity of binary search?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 73,
+            "Question": "What is the worst case complexity of linear search?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 74,
+            "Question": "Which is the more smaller (more efficient) time complexity for large input data?",
+            "Answers": [
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Binary search trees",
+        "Questions": [
+          {
+            "Id": 75,
+            "Question": "How many Node object references does a binary search tree Node contain?",
+            "Answers": [
+              {
+                "Text": "0",
+                "IsCorrect": false
+              },
+              {
+                "Text": "1",
+                "IsCorrect": false
+              },
+              {
+                "Text": "2",
+                "IsCorrect": true
+              },
+              {
+                "Text": "3",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 76,
+            "Question": "How might you compute if the binary search tree is empty?",
+            "Answers": [
+              {
+                "Text": "rootNode.leftChild() == null && rootNode.rightChild() == null",
+                "IsCorrect": false
+              },
+              {
+                "Text": "rootNode.getValue() == 0",
+                "IsCorrect": false
+              },
+              {
+                "Text": "rootNode == null",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 77,
+            "Question": "If v=11, what should happen if insertNode(v) is called on a Node with value 13 that itself has two children?",
+            "Answers": [
+              {
+                "Text": "this.setLeftChild( new Node(v) )",
+                "IsCorrect": false
+              },
+              {
+                "Text": "this.setLeftChild( new Node(v) )",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 78,
+            "Question": "If v=11, what should happen if insertNode(v) is called on a Node with value 13 that itself has no children?",
+            "Answers": [
+              {
+                "Text": "this.setLeftChild( new Node(v) )",
+                "IsCorrect": true
+              },
+              {
+                "Text": "this.getLeftChild().insertNode(v)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 79,
+            "Question": "What should happen when inserting a value v=19 at a leaf node with value 18?",
+            "Answers": [
+              {
+                "Text": "this.setRightChild( new Node(v) )",
+                "IsCorrect": true
+              },
+              {
+                "Text": "this.getLeftChild().insertNode(v)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 80,
+            "Question": "What is the average time complexity for search over a binary search tree?",
+            "Answers": [
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 81,
+            "Question": "What is the complexity of searching for the largest value in a binary search tree where all children are on the right (the tree is skewed to the right)?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 82,
+            "Question": "How do you delete a node with value 12, which is also a leaf node?",
+            "Answers": [
+              {
+                "Text": "1 find the node with value 12,\n2 set the left/right reference of the parent of that node to null.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "1 find the node with value 12,\n2 update this node's value to null.",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 83,
+            "Question": "Select all common operations on binary search trees",
+            "Answers": [
+              {
+                "Text": "search",
+                "IsCorrect": true
+              },
+              {
+                "Text": "enqueue",
+                "IsCorrect": false
+              },
+              {
+                "Text": "push",
+                "IsCorrect": false
+              },
+              {
+                "Text": "delete",
+                "IsCorrect": true
+              },
+              {
+                "Text": "pop",
+                "IsCorrect": false
+              },
+              {
+                "Text": "insert",
+                "IsCorrect": true
+              },
+              {
+                "Text": "dequeue",
+                "IsCorrect": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Priority queues",
+        "Questions": [
+          {
+            "Id": 84,
+            "Question": "Select all operations on a priority queue",
+            "Answers": [
+              {
+                "Text": "push",
+                "IsCorrect": false
+              },
+              {
+                "Text": "insert",
+                "IsCorrect": true
+              },
+              {
+                "Text": "dequeue",
+                "IsCorrect": false
+              },
+              {
+                "Text": "min",
+                "IsCorrect": true
+              },
+              {
+                "Text": "removeMin",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 85,
+            "Question": "Select the correct property of a min heap",
+            "Answers": [
+              {
+                "Text": "a node's value is smaller than their parent's value",
+                "IsCorrect": false
+              },
+              {
+                "Text": "a node's value is larger than their parent's value",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 86,
+            "Question": "In a min heap the \"last node\" pointer is...",
+            "Answers": [
+              {
+                "Text": "the root of the tree",
+                "IsCorrect": false
+              },
+              {
+                "Text": "the smallest value in a tree",
+                "IsCorrect": false
+              },
+              {
+                "Text": "the rightmost node at the lowest level of the tree",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 87,
+            "Question": "After inserting a node at the \"last node\" position, which operation must be performed to restore the heap property?",
+            "Answers": [
+              {
+                "Text": "upheap",
+                "IsCorrect": true
+              },
+              {
+                "Text": "downheap",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 88,
+            "Question": "After calling removeMin(), which operation must be performed to restore the heap property?",
+            "Answers": [
+              {
+                "Text": "upheap",
+                "IsCorrect": false
+              },
+              {
+                "Text": "downheap",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 89,
+            "Question": "What is the complexity of removeMin using a min heap?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 90,
+            "Question": "What is the complexity of min() using a min heap?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 91,
+            "Question": "A min heap could be heavily skewed to the left",
+            "Answers": [
+              {
+                "Text": "False",
+                "IsCorrect": true
+              },
+              {
+                "Text": "True",
+                "IsCorrect": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Tries",
+        "Questions": [
+          {
+            "Id": 92,
+            "Question": "How many children does each trie node have for storing words in a dictionary?",
+            "Answers": [
+              {
+                "Text": "1",
+                "IsCorrect": false
+              },
+              {
+                "Text": "2",
+                "IsCorrect": false
+              },
+              {
+                "Text": "26",
+                "IsCorrect": true
+              },
+              {
+                "Text": "97",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 93,
+            "Question": "A trie node is containing a final character of a word if...",
+            "Answers": [
+              {
+                "Text": "it has 26 children",
+                "IsCorrect": false
+              },
+              {
+                "Text": "it is a null node",
+                "IsCorrect": false
+              },
+              {
+                "Text": "it is a leaf or is marked as a valid word",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 94,
+            "Question": "Where N is the number of words in a trie dictionary, what is the cost of search(word)?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 95,
+            "Question": "Select all operations on a trie",
+            "Answers": [
+              {
+                "Text": "push",
+                "IsCorrect": false
+              },
+              {
+                "Text": "enqueue",
+                "IsCorrect": false
+              },
+              {
+                "Text": "insert",
+                "IsCorrect": true
+              },
+              {
+                "Text": "top",
+                "IsCorrect": false
+              },
+              {
+                "Text": "delete",
+                "IsCorrect": true
+              },
+              {
+                "Text": "dequeue",
+                "IsCorrect": false
+              },
+              {
+                "Text": "removeMin",
+                "IsCorrect": false
+              },
+              {
+                "Text": "search",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 96,
+            "Question": "What is the integer ASCII value for character 'a'?",
+            "Answers": [
+              {
+                "Text": "0",
+                "IsCorrect": false
+              },
+              {
+                "Text": "1",
+                "IsCorrect": false
+              },
+              {
+                "Text": "26",
+                "IsCorrect": false
+              },
+              {
+                "Text": "97",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 97,
+            "Question": "How do we search for a word in a trie?",
+            "Answers": [
+              {
+                "Text": "recursively add each letter until we get to last node, then set isValidEnd=true",
+                "IsCorrect": false
+              },
+              {
+                "Text": "set isValidEnd=false for a leaf node",
+                "IsCorrect": false
+              },
+              {
+                "Text": "traverse the trie and the string characters until we find isValidEnd==true, return false if we run out of nodes",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 98,
+            "Question": "When deleting words from a dictionary trie, we should be careful to avoid (select all appropriate)...",
+            "Answers": [
+              {
+                "Text": "deleting nodes when the deleted string is a substring of another string",
+                "IsCorrect": true
+              },
+              {
+                "Text": "deleting nodes when the deleted string shares a common prefix with another string",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 99,
+            "Question": "What is the complexity of insert/delete on a dictionary trie, where N is the number of words in the dictionary?",
+            "Answers": [
+              {
+                "Text": "insert: O(1), delete: O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "insert: O(N), delete: O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "insert: O(N), delete: O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "insert: O(1), delete: O(1)",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Insertion/bubble sorting",
+        "Questions": [
+          {
+            "Id": 100,
+            "Question": "Select all correct properties. For insertion sort, after the Nth iteration...",
+            "Answers": [
+              {
+                "Text": "values at 0..n-1 indexes of the array are unsorted",
+                "IsCorrect": false
+              },
+              {
+                "Text": "values at n..length-1 indexes of the array may not be sorted",
+                "IsCorrect": true
+              },
+              {
+                "Text": "values at 0..n-1 indexes of the array are sorted",
+                "IsCorrect": true
+              },
+              {
+                "Text": "values at n..length-1 indexes of the array are sorted",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 101,
+            "Question": "What is the complexity growth rate of insertion sort?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(2N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 102,
+            "Question": "What is the name of O(N^2)?",
+            "Answers": [
+              {
+                "Text": "Constant function",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Logarithmic function",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Linear function",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Quadratic function",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 103,
+            "Question": "During bubble sort, which two are the correct statements?",
+            "Answers": [
+              {
+                "Text": "elements at the start of the array will be sorted",
+                "IsCorrect": false
+              },
+              {
+                "Text": "elements at the end of the array will be sorted",
+                "IsCorrect": true
+              },
+              {
+                "Text": "elements at the start of the array may be unsorted",
+                "IsCorrect": true
+              },
+              {
+                "Text": "elements at the end of the array may be unsorted",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 104,
+            "Question": "What is the complexity growth rate of bubble sort?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(2N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Merge/Quick sorting",
+        "Questions": [
+          {
+            "Id": 105,
+            "Question": "What does the divide phase of merge-sort do?",
+            "Answers": [
+              {
+                "Text": "Split list into Less than L, equals E and greater than G lists",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Split list into two equal halves",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 106,
+            "Question": "What is the complexity of the merge phase of merge-sort?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 107,
+            "Question": "What is the worst case complexity of binary search on a balanced tree?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 108,
+            "Question": "What is the complexity of the partition phase of merge-sort?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(log N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(N^2)",
+                "IsCorrect": false
+              }              
+            ]
+          },
+          {
+            "Id": 109,
+            "Question": "What does the divide phase of quick-sort do?",
+            "Answers": [
+              {
+                "Text": "Splits the list into two equal halves",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Splits the list into values less than (L), equal to (E) and greater than (G) a pivot value",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
       }
+
+
+
     ]
   }
 ]
