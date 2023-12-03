@@ -256,7 +256,7 @@
         "Topic": "Stacks (with arrays)",
         "Questions": [
           {
-            "Id": 0,
+            "Id": 15,
             "Question": "ADT stands for",
             "Answers": [
               {
@@ -274,7 +274,7 @@
             ]
           },
           {
-            "Id": 0,
+            "Id": 16,
             "Question": "Select all examples of stacks",
             "Answers": [
               {
@@ -300,7 +300,7 @@
             ]
           },
           {
-            "Id": 0,
+            "Id": 17,
             "Question": "How do you add data to a stack?",
             "Answers": [
               {
@@ -322,6 +322,185 @@
               {
                 "Text": "size()",
                 "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 18,
+            "Question": "What happens if you pop() an empty stack?",
+            "Answers": [
+              {
+                "Text": "returns void",
+                "IsCorrect": false
+              },
+              {
+                "Text": "returns false",
+                "IsCorrect": false
+              },
+              {
+                "Text": "throws StackException",
+                "IsCorrect": true
+              },
+              {
+                "Text": "returns top object and returns its value",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 19,
+            "Question": "A Stack is a LIFO structure. What does LIFO mean?",
+            "Answers": [
+              {
+                "Text": "Late Input First Output",
+                "IsCorrect": false
+              },
+              {
+                "Text": "First In Last Out",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Last In First Out",
+                "IsCorrect": true
+              },
+              {
+                "Text": "First In Last Out",
+                "IsCorrect": false
+              },
+              {
+                "Text": "First In First Out",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 20,
+            "Question": "What does isEmpty() on a stack do?",
+            "Answers": [
+              {
+                "Text": "empties the stack",
+                "IsCorrect": false
+              },
+              {
+                "Text": "returns the top element",
+                "IsCorrect": false
+              },
+              {
+                "Text": "pops the top element",
+                "IsCorrect": false
+              },
+              {
+                "Text": "returns the size of the stack",
+                "IsCorrect": false
+              },
+              {
+                "Text": "returns true if there are no elements in the stack, false otherwise",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 21,
+            "Question": "Where do you write the implementation of a stack?",
+            "Answers": [
+              {
+                "Text": "In the Java Interface file",
+                "IsCorrect": false
+              },
+              {
+                "Text": "In the Java Class file",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 22,
+            "Question": "What is a limitation of using array to implement stacks",
+            "Answers": [
+              {
+                "Text": "Array lookups are very fast",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Array lookups are very slow",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Array operations are computationally complex",
+                "IsCorrect": false
+              },
+              {
+                "Text": "They have a fixed sized structure limiting the size of the stack",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Topic": "Recursion",
+        "Questions": [
+          {
+            "Id": 23,
+            "Question": "A recursive method is:",
+            "Answers": [
+              {
+                "Text": "A for loop",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A method that calls itself",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 24,
+            "Question": "In a recursive method, a base case:",
+            "Answers": [
+              {
+                "Text": "recursively calls the method",
+                "IsCorrect": false
+              },
+              {
+                "Text": "throws an exception",
+                "IsCorrect": false
+              },
+              {
+                "Text": "returns a value from the method",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 13,
+            "Question": "In a recursive method, a recursive case:",
+            "Answers": [
+              {
+                "Text": "returns a value from the method",
+                "IsCorrect": false
+              },
+              {
+                "Text": "recursively calls the method",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 25,
+            "Question": "Select all recursive methods",
+            "Answers": [
+              {
+                "Text": "public int length(String str){\n\tif (str.isEmpty()) {\n\t\treturn 0;\n\t} else {\n\t\treturn 1 + length(str.substring(1));\n\t}\n}",
+                "IsCorrect": true
+              },
+              {
+                "Text": "public int sum(int[] arr){\n\tint x = 0;\n\tfor (int i=0; i<arr.length; i++) {\n\t\tx = arr[i];\n\t}\n\treturn x;\n}",
+                "IsCorrect": false
+              },
+              {
+                "Text": "public int sum(int[] arr, int idx, int accum){\n\tif (arr.length == idx) {\n\t\treturn accum;\n\t} else {\n\t\treturn sum(arr, idx+1, accum+arr[idx]);\n\t}\n}",
+                "IsCorrect": true
               }
             ]
           }

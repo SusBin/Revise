@@ -8,24 +8,40 @@
 <div class="container">
     @foreach (var question in Model.Questions)
     {
-        <div class="question-block">
-            <h2>@question.Question</h2>
-            @foreach (var answer in question.Answers)
-            {
-                <p class="answer">@answer.Text
+        <div class="card mb-3">
+    <div class="card-header">
+        <h2>@question.Question</h2>
+    </div>
+    <div class="card-body">
+    @foreach (var answer in question.Answers)
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <p class="answer">
+                    @Html.Raw(answer.Text.Replace("\n", "<br />").Replace("\t", "  "))
+                </p>
+            </div>
+            <div class="col-md-6 text-right">
                 <span class="correctness">
                     @if (answer.IsCorrect)
                     {
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check correct"></i>
                     }
                     else
                     {
-                        <i class="fas fa-times"></i>
+                        <i class="fas fa-times incorrect"></i>
                     }
-                    </span>
-                </p>
-            }
-            <a href="/Question/Edit/@question.Id" class="edit-button">Edit</a>
+                </span>
+            </div>
+            <hr />
         </div>
+    }
+            </div>
+            <div class="card-footer text-right">
+                <a href="/Question/Edit/@question.Id" class="edit-button">Edit</a>
+            </div>
+    
+</div>
+
     }
 </div>
