@@ -255,6 +255,76 @@
       {
         "Topic": "Stacks (with arrays)",
         "Questions": [
+          {
+            "Id": 0,
+            "Question": "ADT stands for",
+            "Answers": [
+              {
+                "Text": "Anonymous Data Type",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Algebraic Data Target",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Abstract Data Type",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 0,
+            "Question": "Select all examples of stacks",
+            "Answers": [
+              {
+                "Text": "Queuing at an airport",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A queue of printer jobs",
+                "IsCorrect": false
+              },
+              {
+                "Text": "\u0022undo\u0022 button in a text editor",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Stack of trays in a coffee shop",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Pile of T-shirts in a wardrobe",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 0,
+            "Question": "How do you add data to a stack?",
+            "Answers": [
+              {
+                "Text": "pop()",
+                "IsCorrect": false
+              },
+              {
+                "Text": "add()",
+                "IsCorrect": false
+              },
+              {
+                "Text": "push()",
+                "IsCorrect": true
+              },
+              {
+                "Text": "top()",
+                "IsCorrect": false
+              },
+              {
+                "Text": "size()",
+                "IsCorrect": false
+              }
+            ]
+          }
         ]
       }
     ]

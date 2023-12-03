@@ -96,6 +96,21 @@ namespace Revise.Services
             }
         }
 
+        public void AddNewQuestion(int courseId, string topicName, RevisionQuestion newQuestion)
+        {
+            var course = GetCourseById(courseId);
+            if (course != null)
+            {
+                var topic = course.Topics.FirstOrDefault(t => t.Topic == topicName);
+                if (topic != null)
+                {
+                    // If the topic is found, add the new question
+                    topic.Questions.Add(newQuestion);
+                    var newJson = JsonSerializer.Serialize(_courses);
+                    System.IO.File.WriteAllText("questions.json", newJson);
+                }
+            }
+        }
 
     }
 }

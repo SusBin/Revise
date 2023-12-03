@@ -1,48 +1,55 @@
 ﻿@page "{id:int}"
 @model Revise.Pages.Question.CreateModel
 @{
+    ViewData["Title"] = "Add Question";
     var courseId = Convert.ToInt32(RouteData.Values["id"]);
 }
-<h1>@Model.Course.CourseName</h1>
-<h2>Create Question topic: @Model.Topic.Topic</h2>
+
+<h2>Add Question</h2>
+
 <form method="post">
-    <input type="hidden" name="courseId" value="@Model.Course.Id" />
-    <input type="hidden" name="Topic.Topic" value="@Model.Topic.Topic" />
-    <input type="hidden" name="Topics" value="@Model.Topics" />
-    <input type="hidden" name="CourseName" value="@Model.CourseName" />
-    <input type="hidden" name="CourseCode" value="@Model.CourseCode" />
+    <input type="hidden" name="TopicName" value="@Model.TopicName" />
+    <input type="hidden" name="CourseId" value="@Model.CourseId" />
     <div class="row">
         <label for="question">Question:</label>
-        <input id="question" name="Topic.Questions[0].Question" />
+        <input id="question" name="NewQuestion.Question" />
     </div>
     <div class="row">
         <label for="answers">Answers:</label>
         <div id="answerFields">
             <div class="answerField">
-                <input class="answer" name="Topic.Questions[0].Answers[0].Text" />
-                <input type="checkbox" class="isCorrect" name="Topic.Questions[0].Answers[0].IsCorrect" /> Correct
+                <input class="answer" name="NewQuestion.Answers[0].Text" />
+                <input type="checkbox" class="isCorrect" name="NewQuesion.Answers[0].IsCorrect" /> Correct
             </div>
         </div>
     </div>
     <button type="button" id="addAnswer">Add another answer</button>
-    <div class="row">        
+    <div class="row">
         <button type="submit">Add Question</button>
     </div>
 </form>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    $(document).ready(function () {
-        var answerIndex = 1;
-        $('#addAnswer').click(function () {
-            $('#answerFields').append('<div class="answerField"><input class="answer" name="Topic.Questions[0].Answers[' + answerIndex + '].Text" /><input type="checkbox" class="isCorrect" onchange="updateCheckboxValue(this)" /><input type="hidden" name="Topic.Questions[0].Answers[' + answerIndex + '].IsCorrect" value="false" /> Correct</div>');
-            answerIndex++;
-        });
+
+
+    var answerIndex = 1;
+
+    document.getElementById('addAnswer').addEventListener('click', function () {
+        var answerFields = document.getElementById('answerFields');
+        var newFieldHtml = `
+                <div class="answerField">
+                    <input class="answer" name="NewQuestion.Answers[${answerIndex}].Text" />
+                    <input type="checkbox" class="isCorrect" name="NewQuestion.Answers[${answerIndex}].IsCorrect" /> Correct
+                </div>
+            `;
+        answerFields.insertAdjacentHTML('beforeend', newFieldHtml);
+        answerIndex++;
     });
 
-    function updateCheckboxValue(checkbox) {
-        $(checkbox).next().val(checkbox.checked ? 'true' : 'false');
-    }
-
-
+    // Code for changing checkbox values before form submission
+    document.querySelector('form').addEventListener('submit', function (e) {
+        document.querySelectorAll('.isCorrect').forEach(function (checkbox) {
+            checkbox.value = checkbox.checked ? 'true' : 'false';
+        });
+    });
 </script>
