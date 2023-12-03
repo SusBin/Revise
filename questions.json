@@ -505,6 +505,234 @@
             ]
           }
         ]
+      },
+      {
+        "Topic": "Linked Lists",
+        "Questions": [
+          {
+            "Id": 26,
+            "Question": "Select one advantage of using arrays for implementing higher level data structures",
+            "Answers": [
+              {
+                "Text": "They can grow and shrink dynamically",
+                "IsCorrect": false
+              },
+              {
+                "Text": "They have very fast random access",
+                "IsCorrect": true
+              },
+              {
+                "Text": "have a fixed size",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 27,
+            "Question": "Select one: dynamic data structures...",
+            "Answers": [
+              {
+                "Text": "have very efficient random access",
+                "IsCorrect": false
+              },
+              {
+                "Text": "dynamically contract and expand",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 28,
+            "Question": "Select all true statements about the following code: Person p;",
+            "Answers": [
+              {
+                "Text": "Declares a variable of type Person",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 29,
+            "Question": "Select all true statements about the following code: p = new Person();",
+            "Answers": [
+              {
+                "Text": "Allocates memory to hold an instance of type Person",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Returns the address of that memory location",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Stores the memory location of the Person instance in variable p",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 30,
+            "Question": "Select all true statements about the following code: Object p = o;",
+            "Answers": [
+              {
+                "Text": "Object o is copied to object p",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Variable p is assigned the same object reference as variable o",
+                "IsCorrect": true
+              },
+              {
+                "Text": "It does not copy the object o to object p",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 31,
+            "Question": "Nodes in a dynamic data structure contain... (select all appropriate answers)",
+            "Answers": [
+              {
+                "Text": "A value",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A recursive method",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A reference to another object(s)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A for loop",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 32,
+            "Question": "What is the type of the value that nodes have for the following Node class?\npublic class Node{\n\tpublic String value;\n\tpublic Node nextNode;\n\tpublic Node(String val){\n\t\tvalue = val;\n\t\tnextNode = null;\n\t}\n};",
+            "Answers": [
+              {
+                "Text": "Object",
+                "IsCorrect": false
+              },
+              {
+                "Text": "integer",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Node",
+                "IsCorrect": false
+              },
+              {
+                "Text": "String",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 33,
+            "Question": "The \"nextNode\" reference in the last element of a linked list points to...",
+            "Answers": [
+              {
+                "Text": "The root node",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Its own value",
+                "IsCorrect": false
+              },
+              {
+                "Text": "null",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Itself",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 34,
+            "Question": "How do you remove an element from a linked list?",
+            "Answers": [
+              {
+                "Text": "Set its value field to null",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Point its nextNode reference to null",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Point it's predecessor node's nextNode to its nextNode reference",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 35,
+            "Question": "How do you add a node E between nodes D and F?",
+            "ImageReference": "LinkedListsQ10.png",
+            "Answers": [
+              {
+                "Text": "Set D's value field to the string \"E\"",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Set D's nextNode field to null",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Point D's nextNode field to E and E's nextNode field to F",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 36,
+            "Question": "What is the complexity of accessing the last element of a linked list?",
+            "Answers": [
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Id": 37,
+            "Question": "What is the complexity of accessing the first element of a linked list?",
+            "Answers": [
+              {
+                "Text": "O(N)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(1)",
+                "IsCorrect": true
+              }
+            ]
+          },
+          {
+            "Id": 38,
+            "Question": "What is the complexity of inserting a node at the tail of a list?",
+            "Answers": [
+              {
+                "Text": "O(1)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "O(N)",
+                "IsCorrect": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

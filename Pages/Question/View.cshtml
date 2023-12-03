@@ -9,39 +9,44 @@
     @foreach (var question in Model.Questions)
     {
         <div class="card mb-3">
-    <div class="card-header">
-        <h2>@question.Question</h2>
-    </div>
-    <div class="card-body">
-    @foreach (var answer in question.Answers)
-    {
-        <div class="row">
-            <div class="col-md-6">
-                <p class="answer">
-                    @Html.Raw(answer.Text.Replace("\n", "<br />").Replace("\t", "  "))
-                </p>
+            <div class="card-header">
+                <h3>@Html.Raw(@question.Question.Replace("\n", "<br />").Replace("\t", "  "))</h3>
             </div>
-            <div class="col-md-6 text-right">
-                <span class="correctness">
-                    @if (answer.IsCorrect)
-                    {
-                        <i class="fas fa-check correct"></i>
-                    }
-                    else
-                    {
-                        <i class="fas fa-times incorrect"></i>
-                    }
-                </span>
-            </div>
-            <hr />
-        </div>
-    }
+            <div class="card-body">
+                @if (!string.IsNullOrEmpty(question.ImageReference))
+                {
+                    <div class="row justify-content-center">
+                        <img src="/images/@question.ImageReference" alt="Question Image" class="question-image" />
+                    </div>
+                }
+                @foreach (var answer in question.Answers)
+                {
+                    <div class="row answer-row">
+                        <div class="col-md-6">
+                            <p class="answer">
+                                @Html.Raw(answer.Text.Replace("\n", "<br />").Replace("\t", "  "))
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <span class="correctness">
+                                @if (answer.IsCorrect)
+                                {
+                                    <i class="fas fa-check correct"></i>
+                                }
+                                else
+                                {
+                                    <i class="fas fa-times incorrect"></i>
+                                }
+                            </span>
+                        </div>                        
+                    </div>
+                }
             </div>
             <div class="card-footer text-right">
                 <a href="/Question/Edit/@question.Id" class="edit-button">Edit</a>
             </div>
-    
-</div>
+
+        </div>
 
     }
 </div>

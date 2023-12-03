@@ -27,3 +27,13 @@ body {
 .incorrect {
     color: red;
 }
+.question-image {
+    max-width: 30vw;
+    height: auto;
+    margin-bottom: 10px;
+}
+.answer-row {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}

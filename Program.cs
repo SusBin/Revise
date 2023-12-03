@@ -10,6 +10,9 @@ builder.Services.AddSingleton<QuestionService>();
 
 var app = builder.Build();
 
+// Enable static files.
+app.UseStaticFiles();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
