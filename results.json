@@ -1,0 +1,12 @@
+[
+  {
+    "TestId": 1,
+    "Date": "2023-12-07T17:06:14Z",
+    "ScorePercentage": 85
+  },
+  {
+    "TestId": 2,
+    "Date": "2023-12-08T17:06:14Z",
+    "ScorePercentage": 90
+  }
+]

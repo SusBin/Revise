@@ -1,0 +1,28 @@
+﻿@page
+@model Revise.Pages.Test.ResultsModel
+@{
+}
+
+<div class="container">
+    <h1 class="text-center">Test Results</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Test ID</th>
+                <th scope="col">Date</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in Model.Results)
+            {
+                <tr>
+                    <td>@result.TestId</td>
+                    <td>@result.Date.ToString("g")</td>
+                    <td>@result.ScorePercentage.ToString("F1")%</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,5 +1,6 @@
 ﻿using Revise.Models;
 using System.Text.Json;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Revise.Services
 {
@@ -177,7 +178,18 @@ namespace Revise.Services
             // Return the randomly selected question
             return questions[randomIndex];
         }
-        
+
+        public Test GenerateTest(int courseId, int numQuestions)
+        {
+            var test = new Test { Questions = new List<RevisionQuestion>() };
+            for (int i = 0; i < numQuestions; i++)
+            {
+                var question = GetRandomQuestion(courseId);
+                test.Questions.Add(question);
+            }
+            return test;
+        }
+
         public void DeleteQuestion(int courseId, string topicName, int id)
         {
             var course = _courses.FirstOrDefault(c => c.Id == courseId);
