@@ -12,13 +12,26 @@ namespace Revise.Pages.Test
 
         public ResultsModel(ResultService resultService)
         {
-            _resultService = resultService;
+            _resultService = resultService ?? throw new ArgumentNullException(nameof(resultService));
         }
 
         public void OnGet()
         {
-            // Load the results when the page is accessed
-            Results = _resultService.LoadResults();
+            try
+            {
+                // Load the results when the page is accessed
+                Results = _resultService.LoadResults();
+                // Add a debug statement
+                Console.WriteLine("Results loaded successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (log, display an error message, etc.)
+                Console.WriteLine($"Error loading results: {ex.Message}");
+                Results = new List<Result>();
+            }
         }
+
+
     }
 }

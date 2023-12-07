@@ -34,12 +34,26 @@ namespace Revise.Services
             return (int)(_courses.FirstOrDefault(c => c.Topics.Any(t => t.Topic == topicName))?.Id);
         }
 
+        public RevisionQuestion GetQuestionById(int id)
+        {
+            return _courses.SelectMany(c => c.Topics.SelectMany(t => t.Questions))
+                           .FirstOrDefault(q => q.Id == id);
+        }
+
+        public RevisionQuestion GetQuestionById(int courseId, int id)
+        {
+            return _courses.FirstOrDefault(c => c.Id == courseId)
+                           ?.Topics.SelectMany(t => t.Questions)
+                           .FirstOrDefault(q => q.Id == id);
+        }
+
         public RevisionQuestion GetQuestionById(int courseId, string topicName, int id)
         {
             return _courses.FirstOrDefault(c => c.Id == courseId)
                            ?.Topics.FirstOrDefault(t => t.Topic == topicName)
                            ?.Questions.FirstOrDefault(q => q.Id == id);
         }
+
         public Course GetCourseById(int courseId)
         {
             return _courses.FirstOrDefault(c => c.Id == courseId);

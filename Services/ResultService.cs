@@ -5,6 +5,13 @@ namespace Revise.Services
 {
     public class ResultService
     {
+        private readonly string _filePath;
+
+        public ResultService(IWebHostEnvironment environment)
+        {
+            _filePath = Path.Combine(environment.ContentRootPath, "results.json");
+        }
+
         public void SaveResult(Result result)
         {
             // Load the existing results
@@ -23,20 +30,33 @@ namespace Revise.Services
 
         public List<Result> LoadResults()
         {
-            // Read the JSON from the results file
-            var json = File.ReadAllText("results.json");
-
-            // Define a helper class to match the structure of the JSON data
-            var helper = new { Results = new List<Result>() };
-
-            // Deserialize the JSON data into the helper object
-            var data = JsonSerializer.Deserialize(json, helper.GetType());
-
-            // Extract the list of results from the helper object
-            var results = ((List<Result>)data.GetType().GetProperty("Results").GetValue(data, null));
-
-            return results;
+            try
+            {
+                var json = File.ReadAllText(_filePath);
+                return JsonSerializer.Deserialize<List<Result>>(json);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or print it to the console for debugging
+                Console.WriteLine($"Error loading results: {ex.Message}");
+                return new List<Result>();
+            }
         }
+
+        public int GetNextTestId()
+        {
+            // Read the JSON from the results file
+            var json = File.ReadAllText(_filePath);
+
+            // Deserialize the JSON into a list of Result objects
+            var results = JsonSerializer.Deserialize<List<Result>>(json);
+
+            // Find the highest existing TestId and return the next one
+            int nextTestId = results.Any() ? results.Max(r => r.TestId) + 1 : 1;
+
+            return nextTestId;
+        }
+
 
 
     }

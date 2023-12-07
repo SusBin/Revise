@@ -8,8 +8,14 @@
 <div class="container">
     <form method="get">
         <div class="form-group">
-            <label for="courseId">Course ID</label>
-            <input type="text" id="courseId" name="courseId" class="form-control" />
+            <label for="courseId">Course</label>
+            <select id="courseId" name="courseId" class="form-control">
+                <option value="">Select a course</option>
+                @foreach (var course in Model.Courses)
+                {
+                    <option value="@course.Key">@course.Value</option>
+                }
+            </select>
         </div>
         <div class="form-group">
             <label for="numQuestions">Number of Questions</label>
@@ -22,6 +28,7 @@
 
 <div class="container">
     <form method="post">
+        @Html.AntiForgeryToken()
         <input type="hidden" name="courseId" value="@courseId" />
         <input type="hidden" name="numQuestions" value="@numQuestions" />
 
@@ -48,7 +55,7 @@
                                 </p>
                             </div>
                             <div class="col-md-6 text-right">
-                                <input type="checkbox" name="answers[@question.Id]" value="@i" /> Select
+                                <input type="checkbox" name="answers[@question.Id][@i]" value="true" /> Select
                             </div>
                         </div>
                     }
@@ -58,3 +65,4 @@
         <button type="submit" class="btn btn-primary">Submit Test</button>
     </form>
 </div>
+
