@@ -1,1 +1,7 @@
-[{"TestId":1,"Date":"2023-12-08T14:08:18.6685706+00:00","ScorePercentage":100},{"TestId":2,"Date":"2023-12-08T14:32:52.5868522+00:00","ScorePercentage":100},{"TestId":3,"Date":"2023-12-08T14:49:59.5190634+00:00","ScorePercentage":100},{"TestId":4,"Date":"2023-12-08T14:50:22.5484334+00:00","ScorePercentage":0},{"TestId":5,"Date":"2023-12-08T14:51:34.6534466+00:00","ScorePercentage":50}]
+[
+  {
+    "TestId": 1,
+    "Date": "2023-12-08T14:08:18.6685706+00:00",
+    "ScorePercentage": 100
+  }
+]
