@@ -5,24 +5,90 @@
 
 <div class="container">
     <h1 class="text-center">Test Results</h1>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Test ID</th>
-                <th scope="col">Date</th>
-                <th scope="col">Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var result in Model.Results)
-            {
-                <tr>
-                    <td>@result.TestId</td>
-                    <td>@result.Date.ToString("g")</td>
-                    <td>@result.ScorePercentage.ToString("F1")%</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+    <div class="accordion" id="resultsAccordion">
+        @foreach (var result in Model.Results)
+        {
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading@(result.TestId)">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse@(result.TestId)" aria-expanded="false" aria-controls="collapse@(result.TestId)">
+                        Test ID: @result.TestId, Date: @result.Date.ToString("g"), Score: @result.ScorePercentage.ToString("F1")%
+                    </button>
+                </h2>
+                <div id="collapse@(result.TestId)" class="accordion-collapse collapse" aria-labelledby="heading@(result.TestId)" data-bs-parent="#resultsAccordion">
+                    <div class="accordion-body">
+                        <strong>Incorrect Questions:</strong>
+                        @if (Model.IncorrectQuestionsPerTest.ContainsKey(result.TestId))
+                        {
+                            foreach (var question in Model.IncorrectQuestionsPerTest[result.TestId])
+                            {                                
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        <h3>@Html.Raw(@question.Question.Replace("\n", "<br />").Replace("\t", "  "))</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        @if (!string.IsNullOrEmpty(question.ImageReference))
+                                        {
+                                            <div class="row justify-content-center">
+                                                <img src="/images/@question.ImageReference" alt="Question Image" class="question-image" />
+                                            </div>
+                                        }
+                                        @for (var i = 0; i < question.Answers.Count; i++)
+                                        {
+                                            var answer = question.Answers[i];
+                                            <div class="row answer-row answer-row-@(question.Id)-@(i)">
+                                                <div class="col-md-6">
+                                                    <p class="answer">
+                                                        @Html.Raw(answer.Text.Replace("\n", "<br />").Replace("\t", "  "))
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                    <span class="correctness">
+                                                        @if (answer.IsCorrect)
+                                                        {
+                                                            <i class="fas fa-check correct"></i>
+                                                        }
+                                                        else
+                                                        {
+                                                            <i class="fas fa-times incorrect"></i>
+                                                        }
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-center">No incorrect questions.</p>
+                        }
 
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    window.onload = function () {
+    @foreach (var result in Model.Results)
+    {
+        if (Model.IncorrectQuestionsPerTest.ContainsKey(result.TestId))
+        {
+            foreach (var question in Model.IncorrectQuestionsPerTest[result.TestId])
+            {
+                foreach (var answerIndex in result.IncorrectQuestions[question.Id])
+                {
+                    <text>
+                        var answerRow = document.querySelector('.answer-row-@(question.Id)-@(answerIndex)');
+                        if (answerRow) {
+                            answerRow.classList.add('incorrect-answer');
+                        }
+                    </text>
+                }
+            }
+        }
+    }
+        };
+</script>

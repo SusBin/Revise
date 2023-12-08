@@ -47,8 +47,8 @@ namespace Revise.Pages.Test
                 }
             }
             int correctQuestions = 0;
-
-
+            // Create a dictionary to store incorrect questions and their selected answers
+            Dictionary<int, List<int>> incorrectQuestions = new Dictionary<int, List<int>>();
             foreach (var question in Questions)
             {
                 int correctAnswers = 0;
@@ -97,6 +97,19 @@ namespace Revise.Pages.Test
                 {
                     correctQuestions++;
                 }
+                else
+                {
+                    //record the QuestionID in an incorrect Questions List
+                    //record the indec of the selected answer to allow me to highlight the incorrect answer
+                    //in comparison to the correct answer
+                    var selectedAnswerIndices = Request.Form.Keys
+                    .Where(key => key.StartsWith($"answers[{question.Id}]"))
+                    .Select(key => int.Parse(key.Split('[')[2].TrimEnd(']')))
+                    .ToList();
+
+                    // Add the question ID and selected answer indices to the dictionary
+                    incorrectQuestions.Add(question.Id, selectedAnswerIndices);
+                }
             }
 
             // Calculate the score as a percentage
@@ -107,16 +120,13 @@ namespace Revise.Pages.Test
             {
                 TestId = _resultService.GetNextTestId(),
                 Date = DateTime.Now,
-                ScorePercentage = scorePercentage
+                ScorePercentage = scorePercentage,
+                IncorrectQuestions = incorrectQuestions
             };
             _resultService.SaveResult(result);
 
             // Redirect the user to a results page
             return RedirectToPage("./Results");
         }
-
-
-
-
     }
 }

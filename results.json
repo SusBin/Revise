@@ -2,6 +2,32 @@
   {
     "TestId": 1,
     "Date": "2023-12-08T14:08:18.6685706+00:00",
-    "ScorePercentage": 100
+    "ScorePercentage": 100,
+    "IncorrectQuestions": {
+    }
+  },
+  {
+    "TestId": 2,
+    "Date": "2023-12-08T21:52:25.9271923+00:00",
+    "ScorePercentage": 80,
+    "IncorrectQuestions": {
+      "10": [
+        0
+      ],
+      "20": [
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "TestId": 3,
+    "Date": "2023-12-08T23:21:39.0397617+00:00",
+    "ScorePercentage": 50,
+    "IncorrectQuestions": {
+      "13": [
+        1
+      ]
+    }
   }
 ]
