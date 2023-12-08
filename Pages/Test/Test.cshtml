@@ -5,7 +5,7 @@
     var numQuestions = Request.Query["numQuestions"];
 }
 
-<div class="container">
+<div class="container" id="testContainer">
     <form method="get">
         <div class="form-group">
             <label for="courseId">Course</label>
@@ -26,7 +26,7 @@
 </div>
 
 
-<div class="container">
+<div class="container" id="questionsContainer">
     <form method="post">
         @Html.AntiForgeryToken()
         <input type="hidden" name="courseId" value="@courseId" />
@@ -35,7 +35,7 @@
         @foreach (var question in Model.Questions)
         {
             <div class="card mb-3">
-                <div class="card-header">
+                <div class="card-header" id="question">
                     <h3>@Html.Raw(@question.Question.Replace("\n", "<br />").Replace("\t", "  "))</h3>
                 </div>
                 <div class="card-body">
@@ -55,7 +55,7 @@
                                 </p>
                             </div>
                             <div class="col-md-6 text-right">
-                                <input type="checkbox" name="answers[@question.Id][@i]" value="true" /> Select
+                                <input type="checkbox" class="hidden-checkbox" name="answers[@question.Id][@i]" value="true" />
                             </div>
                         </div>
                     }
@@ -66,3 +66,41 @@
     </form>
 </div>
 
+<script type="text/javascript">
+    // Get the containers
+    var testContainer = document.querySelector('#testContainer');
+    var questionsContainer = document.querySelector('#questionsContainer');
+
+    // Check if the question div contains any text
+    var question = document.querySelector('#question');
+
+    // If the question div has content, hide the test container and show the questions container
+    if (question && question.textContent.trim() !== '') {
+        testContainer.style.display = 'none';
+        questionsContainer.style.display = 'block';
+    } else {
+        // Otherwise, show the test container and hide the questions container
+        testContainer.style.display = 'block';
+        questionsContainer.style.display = 'none';
+    }
+
+    // Get all the answer rows
+    var answerRows = document.querySelectorAll('.answer-row');
+
+    // Add a click event listener to each answer row
+    answerRows.forEach(function (answerRow) {
+        answerRow.addEventListener('click', function () {
+            // When an answer row is clicked, toggle the 'selected' class
+            this.classList.toggle('selected');
+
+            // Find the checkbox within the clicked answer row
+            var checkbox = this.querySelector('input[type="checkbox"]');
+
+            // If the checkbox exists, set its checked property to the opposite of its current value
+            if (checkbox) {
+                checkbox.checked = !checkbox.checked;
+            }
+        });
+    });
+
+</script>
