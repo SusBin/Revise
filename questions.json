@@ -548,6 +548,14 @@
               {
                 "Text": "Declares a variable of type Person",
                 "IsCorrect": true
+              },
+              {
+                "Text": "Allocates memory to hold an instance of type Person",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Allocates memory to hold a memory address",
+                "IsCorrect": true
               }
             ]
           },
@@ -1467,7 +1475,7 @@
                 "IsCorrect": false
               },
               {
-                "Text": "this.setLeftChild( new Node(v) )",
+                "Text": "this.getLeftChild( new Node(v) )",
                 "IsCorrect": true
               }
             ]

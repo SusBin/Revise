@@ -199,10 +199,16 @@ namespace Revise.Services
             for (int i = 0; i < numQuestions; i++)
             {
                 var question = GetRandomQuestion(courseId);
+                //avoid duplicates
+                while (test.Questions.Contains(question))
+                {
+                    question = GetRandomQuestion(courseId);
+                }
                 test.Questions.Add(question);
             }
             return test;
         }
+
 
         public void DeleteQuestion(int courseId, string topicName, int id)
         {

@@ -4,6 +4,7 @@ using Revise.Models;
 using Revise.Services;
 using System;
 using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Revise.Pages.Test
 {
@@ -22,11 +23,17 @@ namespace Revise.Pages.Test
 
         public void OnGet(int courseId, int numQuestions)
         {
+            
             Courses = _questionService.GetCourses();
             Questions = new List<RevisionQuestion>();
             for (int i = 0; i < numQuestions; i++)
             {
                 var question = _questionService.GetRandomQuestion(courseId);
+                //avoid duplicates
+                while (Questions.Contains(question))
+                {
+                    question = _questionService.GetRandomQuestion(courseId);
+                }
                 Questions.Add(question);
             }
         }
