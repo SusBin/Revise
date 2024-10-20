@@ -27,7 +27,8 @@
                 "Text": "@Test",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 5,
@@ -49,7 +50,8 @@
                 "Text": "void",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 6,
@@ -71,7 +73,8 @@
                 "Text": "Exactly 1",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 7,
@@ -93,7 +96,8 @@
                 "Text": "test error conditions",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -120,7 +124,8 @@
                 "Text": "O6 log N",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 9,
@@ -142,7 +147,8 @@
                 "Text": "O2N",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 10,
@@ -156,7 +162,8 @@
                 "Text": "O(1)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 11,
@@ -178,7 +185,8 @@
                 "Text": "O(log N)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 12,
@@ -200,7 +208,8 @@
                 "Text": "O(N^3 \u002B 2^N)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 13,
@@ -222,7 +231,8 @@
                 "Text": "O(1)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 14,
@@ -248,7 +258,8 @@
                 "Text": "comparison",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -271,7 +282,8 @@
                 "Text": "Abstract Data Type",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 16,
@@ -297,7 +309,8 @@
                 "Text": "Pile of T-shirts in a wardrobe",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 17,
@@ -323,7 +336,8 @@
                 "Text": "size()",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 18,
@@ -345,7 +359,8 @@
                 "Text": "returns top object and returns its value",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 19,
@@ -371,7 +386,8 @@
                 "Text": "First In First Out",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 20,
@@ -397,7 +413,8 @@
                 "Text": "returns true if there are no elements in the stack, false otherwise",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 21,
@@ -411,7 +428,8 @@
                 "Text": "In the Java Class file",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 22,
@@ -433,7 +451,8 @@
                 "Text": "They have a fixed sized structure limiting the size of the stack",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -452,7 +471,8 @@
                 "Text": "A method that calls itself",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 24,
@@ -470,7 +490,8 @@
                 "Text": "returns a value from the method",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 13,
@@ -484,25 +505,27 @@
                 "Text": "recursively calls the method",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 25,
             "Question": "Select all recursive methods",
             "Answers": [
               {
-                "Text": "public int length(String str){\n\tif (str.isEmpty()) {\n\t\treturn 0;\n\t} else {\n\t\treturn 1 + length(str.substring(1));\n\t}\n}",
+                "Text": "public int length(String str){\n\tif (str.isEmpty()) {\n\t\treturn 0;\n\t} else {\n\t\treturn 1 \u002B length(str.substring(1));\n\t}\n}",
                 "IsCorrect": true
               },
               {
-                "Text": "public int sum(int[] arr){\n\tint x = 0;\n\tfor (int i=0; i<arr.length; i++) {\n\t\tx = arr[i];\n\t}\n\treturn x;\n}",
+                "Text": "public int sum(int[] arr){\n\tint x = 0;\n\tfor (int i=0; i\u003Carr.length; i\u002B\u002B) {\n\t\tx = arr[i];\n\t}\n\treturn x;\n}",
                 "IsCorrect": false
               },
               {
-                "Text": "public int sum(int[] arr, int idx, int accum){\n\tif (arr.length == idx) {\n\t\treturn accum;\n\t} else {\n\t\treturn sum(arr, idx+1, accum+arr[idx]);\n\t}\n}",
+                "Text": "public int sum(int[] arr, int idx, int accum){\n\tif (arr.length == idx) {\n\t\treturn accum;\n\t} else {\n\t\treturn sum(arr, idx\u002B1, accum\u002Barr[idx]);\n\t}\n}",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -525,7 +548,8 @@
                 "Text": "have a fixed size",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 27,
@@ -539,7 +563,8 @@
                 "Text": "dynamically contract and expand",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 28,
@@ -557,7 +582,8 @@
                 "Text": "Allocates memory to hold a memory address",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 29,
@@ -575,7 +601,8 @@
                 "Text": "Stores the memory location of the Person instance in variable p",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 30,
@@ -593,7 +620,8 @@
                 "Text": "It does not copy the object o to object p",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 31,
@@ -615,7 +643,8 @@
                 "Text": "A for loop",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 32,
@@ -637,11 +666,12 @@
                 "Text": "String",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 33,
-            "Question": "The \"nextNode\" reference in the last element of a linked list points to...",
+            "Question": "The \u0022nextNode\u0022 reference in the last element of a linked list points to...",
             "Answers": [
               {
                 "Text": "The root node",
@@ -659,7 +689,8 @@
                 "Text": "Itself",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 34,
@@ -674,29 +705,30 @@
                 "IsCorrect": false
               },
               {
-                "Text": "Point it's predecessor node's nextNode to its nextNode reference",
+                "Text": "Point it\u0027s predecessor node\u0027s nextNode to its nextNode reference",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 35,
             "Question": "How do you add a node E between nodes D and F?",
-            "ImageReference": "LinkedListsQ10.png",
             "Answers": [
               {
-                "Text": "Set D's value field to the string \"E\"",
+                "Text": "Set D\u0027s value field to the string \u0022E\u0022",
                 "IsCorrect": false
               },
               {
-                "Text": "Set D's nextNode field to null",
+                "Text": "Set D\u0027s nextNode field to null",
                 "IsCorrect": false
               },
               {
-                "Text": "Point D's nextNode field to E and E's nextNode field to F",
+                "Text": "Point D\u0027s nextNode field to E and E\u0027s nextNode field to F",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": "LinkedListsQ10.png"
           },
           {
             "Id": 36,
@@ -710,7 +742,8 @@
                 "Text": "O(1)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 37,
@@ -724,7 +757,8 @@
                 "Text": "O(1)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 38,
@@ -738,7 +772,8 @@
                 "Text": "O(N)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -757,7 +792,8 @@
                 "Text": "O(1)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 40,
@@ -771,7 +807,8 @@
                 "Text": "O(1)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 41,
@@ -785,7 +822,8 @@
                 "Text": "O(N)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 42,
@@ -807,7 +845,8 @@
                 "Text": "public Node(int i) {\n\tvalue = i;\n\tnextNode = head;\n}",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 43,
@@ -829,7 +868,8 @@
                 "Text": "public void addNodeAtTail(Node n) {\n\tif (this.nextNode == null) {\n\t\tthis.nextNode = n;\n\t} else {\n\t\tthis.nextNode.addNodeAtTail(n);\n\t}\n}",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 44,
@@ -847,7 +887,8 @@
                 "Text": "public void addAtHead(int i) {\n\tNode newNode = new Node(i);\n\tnewNode.setNextNode(headNode);\n\theadNode = newNode;\n}",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -878,7 +919,8 @@
                 "Text": "addToTail",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 46,
@@ -892,7 +934,8 @@
                 "Text": "They can dynamically grow and shrink",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 47,
@@ -914,7 +957,8 @@
                 "Text": "removeFromTail",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 48,
@@ -932,7 +976,8 @@
                 "Text": "Head of the list",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 49,
@@ -950,7 +995,8 @@
                 "Text": "StackException",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 50,
@@ -968,7 +1014,8 @@
                 "Text": "2",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 51,
@@ -986,7 +1033,8 @@
                 "Text": "2",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1005,7 +1053,8 @@
                 "Text": "FIFO",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 53,
@@ -1031,7 +1080,8 @@
                 "Text": "dequeue",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 54,
@@ -1045,7 +1095,8 @@
                 "Text": "Array",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 55,
@@ -1060,10 +1111,11 @@
                 "IsCorrect": false
               },
               {
-                "Text": "(capacity - f + r) % capacity",
+                "Text": "(capacity - f \u002B r) % capacity",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 56,
@@ -1093,7 +1145,8 @@
                 "Text": "dequeue - O(N)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 57,
@@ -1107,7 +1160,8 @@
                 "Text": "head = head.next;",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 58,
@@ -1125,7 +1179,8 @@
                 "Text": "tail remains unchanged",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1148,7 +1203,8 @@
                 "Text": "3",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 60,
@@ -1162,7 +1218,8 @@
                 "Text": "tailNode",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 61,
@@ -1180,7 +1237,8 @@
                 "Text": "3",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 62,
@@ -1198,7 +1256,8 @@
                 "Text": "public Node(Object val){\n\tvalue = val;\n}",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 63,
@@ -1216,7 +1275,8 @@
                 "Text": "the new node",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 64,
@@ -1227,14 +1287,15 @@
                 "IsCorrect": false
               },
               {
-                "Text": "the head node's next node",
+                "Text": "the head node\u0027s next node",
                 "IsCorrect": false
               },
               {
                 "Text": "null",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1253,7 +1314,8 @@
                 "Text": "False",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 66,
@@ -1267,7 +1329,8 @@
                 "Text": "False",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 67,
@@ -1281,7 +1344,8 @@
                 "Text": "False",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 68,
@@ -1295,11 +1359,12 @@
                 "Text": "True",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 69,
-            "Question": "What is this code doing:\nfor(int i = 0; i < ar.length; i++){\nif(ar[i] == number)\nreturn true;\n}\nreturn false;",
+            "Question": "What is this code doing:\nfor(int i = 0; i \u003C ar.length; i\u002B\u002B){\nif(ar[i] == number)\nreturn true;\n}\nreturn false;",
             "Answers": [
               {
                 "Text": "Binary search on an array",
@@ -1317,7 +1382,8 @@
                 "Text": "Linear search on a linked list",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 70,
@@ -1339,7 +1405,8 @@
                 "Text": "Linear search on a linked list",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 71,
@@ -1361,7 +1428,8 @@
                 "Text": "The data must be ordered",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 72,
@@ -1383,7 +1451,8 @@
                 "Text": "O(log N)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 73,
@@ -1405,7 +1474,8 @@
                 "Text": "O(log N)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 74,
@@ -1419,7 +1489,8 @@
                 "Text": "O(log N)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1446,14 +1517,15 @@
                 "Text": "3",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 76,
             "Question": "How might you compute if the binary search tree is empty?",
             "Answers": [
               {
-                "Text": "rootNode.leftChild() == null && rootNode.rightChild() == null",
+                "Text": "rootNode.leftChild() == null \u0026\u0026 rootNode.rightChild() == null",
                 "IsCorrect": false
               },
               {
@@ -1464,7 +1536,8 @@
                 "Text": "rootNode == null",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 77,
@@ -1478,7 +1551,8 @@
                 "Text": "this.getLeftChild( new Node(v) )",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 78,
@@ -1492,7 +1566,8 @@
                 "Text": "this.getLeftChild().insertNode(v)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 79,
@@ -1506,7 +1581,8 @@
                 "Text": "this.getLeftChild().insertNode(v)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 80,
@@ -1528,7 +1604,8 @@
                 "Text": "O(log N)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 81,
@@ -1550,7 +1627,8 @@
                 "Text": "O(N^2)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 82,
@@ -1561,10 +1639,11 @@
                 "IsCorrect": true
               },
               {
-                "Text": "1 find the node with value 12,\n2 update this node's value to null.",
+                "Text": "1 find the node with value 12,\n2 update this node\u0027s value to null.",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 83,
@@ -1598,7 +1677,8 @@
                 "Text": "dequeue",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1629,25 +1709,27 @@
                 "Text": "removeMin",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 85,
             "Question": "Select the correct property of a min heap",
             "Answers": [
               {
-                "Text": "a node's value is smaller than their parent's value",
+                "Text": "a node\u0027s value is smaller than their parent\u0027s value",
                 "IsCorrect": false
               },
               {
-                "Text": "a node's value is larger than their parent's value",
+                "Text": "a node\u0027s value is larger than their parent\u0027s value",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 86,
-            "Question": "In a min heap the \"last node\" pointer is...",
+            "Question": "In a min heap the \u0022last node\u0022 pointer is...",
             "Answers": [
               {
                 "Text": "the root of the tree",
@@ -1661,11 +1743,12 @@
                 "Text": "the rightmost node at the lowest level of the tree",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 87,
-            "Question": "After inserting a node at the \"last node\" position, which operation must be performed to restore the heap property?",
+            "Question": "After inserting a node at the \u0022last node\u0022 position, which operation must be performed to restore the heap property?",
             "Answers": [
               {
                 "Text": "upheap",
@@ -1675,7 +1758,8 @@
                 "Text": "downheap",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 88,
@@ -1689,7 +1773,8 @@
                 "Text": "downheap",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 89,
@@ -1707,7 +1792,8 @@
                 "Text": "O(N)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 90,
@@ -1725,7 +1811,8 @@
                 "Text": "O(N)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 91,
@@ -1739,7 +1826,8 @@
                 "Text": "True",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1766,7 +1854,8 @@
                 "Text": "97",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 93,
@@ -1784,7 +1873,8 @@
                 "Text": "it is a leaf or is marked as a valid word",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 94,
@@ -1806,7 +1896,8 @@
                 "Text": "O(N^2)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 95,
@@ -1844,11 +1935,12 @@
                 "Text": "search",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 96,
-            "Question": "What is the integer ASCII value for character 'a'?",
+            "Question": "What is the integer ASCII value for character \u0027a\u0027?",
             "Answers": [
               {
                 "Text": "0",
@@ -1866,7 +1958,8 @@
                 "Text": "97",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 97,
@@ -1884,7 +1977,8 @@
                 "Text": "traverse the trie and the string characters until we find isValidEnd==true, return false if we run out of nodes",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 98,
@@ -1898,7 +1992,8 @@
                 "Text": "deleting nodes when the deleted string shares a common prefix with another string",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 99,
@@ -1920,7 +2015,8 @@
                 "Text": "insert: O(1), delete: O(1)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -1947,7 +2043,8 @@
                 "Text": "values at n..length-1 indexes of the array are sorted",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 101,
@@ -1973,7 +2070,8 @@
                 "Text": "O(N^2)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 102,
@@ -1995,7 +2093,8 @@
                 "Text": "Quadratic function",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 103,
@@ -2017,7 +2116,8 @@
                 "Text": "elements at the end of the array may be unsorted",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 104,
@@ -2043,7 +2143,8 @@
                 "Text": "O(N^2)",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           }
         ]
       },
@@ -2062,7 +2163,8 @@
                 "Text": "Split list into two equal halves",
                 "IsCorrect": true
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 106,
@@ -2084,7 +2186,8 @@
                 "Text": "O(N^2)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 107,
@@ -2106,7 +2209,8 @@
                 "Text": "O(N^2)",
                 "IsCorrect": false
               }
-            ]
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 108,
@@ -2127,8 +2231,9 @@
               {
                 "Text": "O(N^2)",
                 "IsCorrect": false
-              }              
-            ]
+              }
+            ],
+            "ImageReference": ""
           },
           {
             "Id": 109,
@@ -2142,13 +2247,1699 @@
                 "Text": "Splits the list into values less than (L), equal to (E) and greater than (G) a pivot value",
                 "IsCorrect": true
               }
+            ],
+            "ImageReference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "CourseName": "Computer Networks",
+    "CourseCode": "F29CN",
+    "Topics": [
+      {
+        "Topic": "Introduction to Computer Networks",
+        "Questions": [
+          {
+            "Id": 1,
+            "Question": "What is a standalone computer?",
+            "Answers": [
+              {
+                "Text": "A workstation",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A type of computer.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A computer not connected to a network.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A computer connected to a network.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 2,
+            "Question": "Select the advantages of a LAN:",
+            "Answers": [
+              {
+                "Text": "Software \u0026 files can be shared",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Initial setup is expensive.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The smaller the network the more expensive it becomes",
+                "IsCorrect": false
+              },
+              {
+                "Text": "It is easily expandable",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Peripherals can be shared",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 3,
+            "Question": "What is a computer network?",
+            "Answers": [
+              {
+                "Text": "A number of connected computers",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A type of computer. ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A number of computers in a room.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 4,
+            "Question": "Select the disadvantages of WAN",
+            "Answers": [
+              {
+                "Text": "Peripherals can be shared",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Spread of viruses.  ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Requires data security measures to avoid hacking",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Large network cover",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Requires data security measures to avoid hacking",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Setting up a network can be expensive",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 5,
+            "Question": "Which Network Topology is fastest?",
+            "Answers": [
+              {
+                "Text": "Ring Network",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Star Network",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Bus Network",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 6,
+            "Question": "Which of the following networks is likely to be a MAN? ",
+            "Answers": [
+              {
+                "Text": "a school network ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "the Internet",
+                "IsCorrect": false
+              },
+              {
+                "Text": "a network of bank cash dispensers ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A university campus",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 7,
+            "Question": "What does a computer network allow computers to share?",
+            "Answers": [
+              {
+                "Text": "Electricity",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Media access",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Resources",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 8,
+            "Question": "Connecting a couple of LANs in a city to form a one network. That network is called...",
+            "Answers": [
+              {
+                "Text": "LANs",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Mesh",
+                "IsCorrect": false
+              },
+              {
+                "Text": "MAN",
+                "IsCorrect": true
+              },
+              {
+                "Text": "WAN",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 9,
+            "Question": "What is a server in a computer network?",
+            "Answers": [
+              {
+                "Text": "the name for a large number of computer cables",
+                "IsCorrect": false
+              },
+              {
+                "Text": "a powerful computer that provides a service, such as centralised file storage ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "someone who manages the network",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 10,
+            "Question": "What are the three main network topologies? ",
+            "Answers": [
+              {
+                "Text": "Coach",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Ring",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Square",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Star",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Bus",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 11,
+            "Question": "What is a Workstation/Client?",
+            "Answers": [
+              {
+                "Text": "a computer connected to a network",
+                "IsCorrect": true
+              },
+              {
+                "Text": "a small network in a station or workshop",
+                "IsCorrect": false
+              },
+              {
+                "Text": "another name for a hub ",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 12,
+            "Question": "Radio waves and microwaves are used in which of the following communications?",
+            "Answers": [
+              {
+                "Text": "IP Telephony",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Enterprise",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Wireless",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Voice over IP",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 13,
+            "Question": "Consider the following statements: Which is true ? Statement A: In Duplex (full) transmission, either node can transmit while the other node can receive data Statement B: In half-duplex transmission, both the nodes can transmit as well as receive data at the same time.",
+            "Answers": [
+              {
+                "Text": "Statement A is false and statement B is true",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Both statements A and B are false",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Both statements A and B are true",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Statement A is true and statement B is false   ",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 14,
+            "Question": "Which of the following statements is NOT true regarding networks?",
+            "Answers": [
+              {
+                "Text": "Networks enable sharing of information across the multiple networks.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Networks enable centralization of data management.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Networks can be divided into four network topologies: mesh, cellular, star and bus. ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "The first network called the ARPANET was created by DOD with the help of Advanced Research Projects Agency (ARPA).",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 15,
+            "Question": "Fill in the missing word: Messages sent over TCP/IP are called",
+            "Answers": [
+              {
+                "Text": "packets",
+                "IsCorrect": true
+              },
+              {
+                "Text": "protocols",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 16,
+            "Question": "Who invented the World Wide Web and in what year?",
+            "Answers": [
+              {
+                "Text": "Blaise Pascal, in  1967",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Tim Berners-Lee, 1989 ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Bill Gates, 1999",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 17,
+            "Question": "What is the meaning of Bandwidth in Network?",
+            "Answers": [
+              {
+                "Text": "Connected Computers in the Network ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Class of IP used in Network",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Average rate of data Transmission ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Transmission capacity of a communication channels",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 18,
+            "Question": "In packet switching, what does \u201Cstatistical multiplexing\u201D mean ?",
+            "Answers": [
+              {
+                "Text": "Fixed pattern to packets from A \u0026 B \u2014 bandwidth not shared on demand",
+                "IsCorrect": false
+              },
+              {
+                "Text": "TDM gives user same slot in repeating TDM frame",
+                "IsCorrect": true
+              },
+              {
+                "Text": "No fixed pattern to packets from A \u0026 B \u2014 bandwidth shared on demand",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Random pattern to packets from A \u0026 B \u2014 bandwidth selected randomly on demand",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 19,
+            "Question": "What is the use of Bridge in Network?",
+            "Answers": [
+              {
+                "Text": "To separate LANs ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "To connect LANs   ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "To control Network Speed   ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "All that, plus Bridge forward packets to the right destination in a network",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 20,
+            "Question": "What type of network is, when the whole message traverses links and is stored at intermediate nodes before being forwarded ?",
+            "Answers": [
+              {
+                "Text": "Circuit Switched",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Packet switched",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Message switched",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Broadcast ",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 21,
+            "Question": "What type of network is, when  all \u201Cconversations\u201D potentially heard by all users?",
+            "Answers": [
+              {
+                "Text": "Store and Forward",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Circuit Switched ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Broadcast",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 22,
+            "Question": "The time required to send from the beginning of the link to next router (x) is ?",
+            "Answers": [
+              {
+                "Text": "Average delay ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Propagation Delay",
+                "IsCorrect": true
+              },
+              {
+                "Text": "End to end delay",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 23,
+            "Question": "Which of the following are Packet Switching Specifications ?",
+            "Answers": [
+              {
+                "Text": "resources used as needed",
+                "IsCorrect": true
+              },
+              {
+                "Text": "router receives complete packet before forwarding     ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "congestion: packets queue, waiting for link to be free",
+                "IsCorrect": true
+              },
+              {
+                "Text": "packets from all users share network resources",
+                "IsCorrect": true
+              },
+              {
+                "Text": "end to end data stream is divided into packets",
+                "IsCorrect": true
+              },
+              {
+                "Text": "each packet gets full bandwidth of link",
+                "IsCorrect": true
+              },
+              {
+                "Text": "packets compete for resources ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "store and forward: packets move one hop at a time",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 24,
+            "Question": "Which is correct for Packet Delay ?",
+            "Answers": [
+              {
+                "Text": "packet arrival rate may exceed output link capacity",
+                "IsCorrect": false
+              },
+              {
+                "Text": "packets queue in routers",
+                "IsCorrect": true
+              },
+              {
+                "Text": "packets lost if no buffer space",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 25,
+            "Question": "Which is correct for Packet Loss?",
+            "Answers": [
+              {
+                "Text": "packets lost if no buffer space ",
+                "IsCorrect": false
+              },
+              {
+                "Text": "packets queue in routers",
+                "IsCorrect": false
+              },
+              {
+                "Text": "packet arrival rate may exceed output link capacity",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          }
+        ]
+      },
+      {
+        "Topic": "Data Transmission (Data link layer)",
+        "Questions": [
+          {
+            "Id": 26,
+            "Question": "The parameter that refers to the set of rules that govern data communications are called",
+            "Answers": [
+              {
+                "Text": "Agency",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Standard",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Protocol",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Forum",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 27,
+            "Question": "In bus topology, the device linking all the nodes in a network is",
+            "Answers": [
+              {
+                "Text": "Backbone",
+                "IsCorrect": true
+              },
+              {
+                "Text": "DropLine",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Hub",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Router",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 28,
+            "Question": "3 basic types of Ethernet hubs exist. Choose these 3 from the list.",
+            "Answers": [
+              {
+                "Text": "Passive Hub",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Inactive Hub",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Active Hub",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Aggressive Hub",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Smart Hub",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 29,
+            "Question": "What are the two sub-layers that the Data-Link layer contains?",
+            "Answers": [
+              {
+                "Text": "Media Error Control (MEC)",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Media Access Control (MAC)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Logical Link Control (LLC)",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Media Flow Control (MFC)",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 30,
+            "Question": "What is the fundamental differences between a router and link layer switch?",
+            "Answers": [
+              {
+                "Text": "A link-layer switch forwards a packet based on the packet\u0027s MAC address",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A router forwards a packet based on the packet\u0027s IP address",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A router is a central connecting device in a network that regenerates signals on the output side to keep the signal strong. while the switch is a networking device which is used multiple devices like Computers",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 31,
+            "Question": "Consider sending a packet from one node to another over a fixed route. List the delay components in the end-to-end delay.",
+            "Answers": [
+              {
+                "Text": "processing delays",
+                "IsCorrect": true
+              },
+              {
+                "Text": "propagation delay",
+                "IsCorrect": true
+              },
+              {
+                "Text": "packet total size",
+                "IsCorrect": false
+              },
+              {
+                "Text": "queuing delays",
+                "IsCorrect": true
+              },
+              {
+                "Text": "transmission delays",
+                "IsCorrect": true
+              },
+              {
+                "Text": "packet switch delays",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 32,
+            "Question": "What advantages does a circuit-switched network have over a packet-switched network?",
+            "Answers": [
+              {
+                "Text": "Most packet-switched networks today (including the Internet) cannot make any end-to-end guarantees for bandwidth.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A circuit-switched network can guarantee a certain amount of end-to-end bandwidth for the duration of a call.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Circuit-switched is faster than packet-switched network",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 33,
+            "Question": "What is the difference between Error detection and Error correction?",
+            "Answers": [
+              {
+                "Text": "Error detection to detect the noise, while error correction to reject that noise",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Error detection uses the concept of redundancy, which means adding extra bits for detecting errors at the destination",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Error detection means to decide whether the received data is correct or not without having a copy of the original message",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 34,
+            "Question": "ATM is an example of",
+            "Answers": [
+              {
+                "Text": "LAN",
+                "IsCorrect": false
+              },
+              {
+                "Text": "MAN",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Switched WAN",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Point to Point WAN",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 35,
+            "Question": "Which of the following is a device directly used by an end user to access a network?",
+            "Answers": [
+              {
+                "Text": "Client",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Router",
+                "IsCorrect": false
+              },
+              {
+                "Text": "LAN",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Server",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 36,
+            "Question": "Which device makes traffic-forwarding decisions based on MAC addresses?",
+            "Answers": [
+              {
+                "Text": "Hub",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Multiplexer",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Switch",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Router",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 37,
+            "Question": "Consider sending a packet from a source host to a destination host over a fixed route. Are Processing Delays Constant or variable?",
+            "Answers": [
+              {
+                "Text": "Constant",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Variable",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 38,
+            "Question": "Consider sending a packet from a source host to a destination host over a fixed route. Are Transmission Delays Constant or variable?",
+            "Answers": [
+              {
+                "Text": "Constant",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Variable",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 39,
+            "Question": "Consider sending a packet from a source host to a destination host over a fixed route. Are Queuing Delays Constant or variable?",
+            "Answers": [
+              {
+                "Text": "Constant",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Variable",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 40,
+            "Question": "Consider sending a packet from a source host to a destination host over a fixed route. Are Propagation Delays Constant or variable?",
+            "Answers": [
+              {
+                "Text": "Constant",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Variable",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 41,
+            "Question": "Assume Node A sends a file to node B. The path from A to B has four links, of rates R1 = 500 kbps, R2 = 2 Mbps, R3 = 200 kbps and R4 = 1 Mbps. Assuming no other traffic in the network. What is the throughput for the file transfer?",
+            "Answers": [
+              {
+                "Text": "200 x 1024 bps",
+                "IsCorrect": true
+              },
+              {
+                "Text": "2 x 1024 x1024 bps",
+                "IsCorrect": false
+              },
+              {
+                "Text": "1024x1024 bps",
+                "IsCorrect": false
+              },
+              {
+                "Text": "500 x 1024 bps",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 42,
+            "Question": "Suppose Node A sends a file to node B. The path from A to B has four links, of rates R1 = 500 kbps, R2 = 2 Mbps, R3 = 200 kbps and R4 = 1 Mbps.  Assume that the file size is 2 Mbytes, roughly how long Node A will take to transfer the file to Node B?",
+            "Answers": [
+              {
+                "Text": "80",
+                "IsCorrect": true
+              },
+              {
+                "Text": "60",
+                "IsCorrect": false
+              },
+              {
+                "Text": "100",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 43,
+            "Question": "What is a data link collision?",
+            "Answers": [
+              {
+                "Text": "When all of the nodes receive multiple frames at the same time; that is, the transmitted frames collide at all of the receivers.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "When a node buffer gets full",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Because all nodes are capable of transmitting frames, two or more simultaneous transmissions (two or more signals at same time) cause interference.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "It is a network blocking",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 44,
+            "Question": "How does a data link collision occur?",
+            "Answers": [
+              {
+                "Text": "It is a network blocking",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Because all nodes are capable of transmitting frames, two or more simultaneous transmissions (two or more signals at same time) cause interference.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "When a node buffer gets full",
+                "IsCorrect": false
+              },
+              {
+                "Text": "When all of the nodes receive multiple frames at the same time; that is, the transmitted frames collide at all of the receivers.",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 45,
+            "Question": "Which of the following apply to \u0022burst errors\u0022 (select all that apply)?",
+            "Answers": [
+              {
+                "Text": "The term burst error means that two or more bits in the data unit have changed",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Burst error means all the data is corrupted",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Burst errors do not necessarily mean that the errors occur in consecutive bits",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Burst errors are where the wrong data is sent",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A host received a corrupted information",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 46,
+            "Question": "How can the length of a burst error be measured?",
+            "Answers": [
+              {
+                "Text": "Burst error is measured by dividing the packet size by the packet header",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The length of the burtst error is equal to header size",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The length of the burst error is the size of the packet without header",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The length of the burst is measured from the first corrupted bit to the last corrupted bit",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 47,
+            "Question": "What is the MAC (sub layer of the data link layer) responsible for?",
+            "Answers": [
+              {
+                "Text": "Gives hardware addresses to all interfaces",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Defines how packets are placed on the media",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 48,
+            "Question": "Which is true of the Physical Layer?",
+            "Answers": [
+              {
+                "Text": "Properties such as voltage, wire speed and connector pin-outs are defined at this layer ",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Layer 4 in the OSI model",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 49,
+            "Question": "Which of the following LAN topologies requires the most cabling?",
+            "Answers": [
+              {
+                "Text": "Bus",
+                "IsCorrect": false
+              },
+              {
+                "Text": "WLAN",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Star",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Ring",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 50,
+            "Question": "Which type of network is based on network clients sharing resources with one another?",
+            "Answers": [
+              {
+                "Text": "Peer-to-server",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Peer-to-peer",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Client-peer",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Client-server",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 51,
+            "Question": "Unlike a hub, which blindly forwards received bits, a bridge makes intelligent forwarding decisions based on the destination MAC address present in a frame.",
+            "Answers": [
+              {
+                "Text": "True",
+                "IsCorrect": true
+              },
+              {
+                "Text": "False",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          }
+        ]
+      },
+      {
+        "Topic": "Sliding Window Protocol and Network Collisions",
+        "Questions": [
+          {
+            "Id": 52,
+            "Question": "Explain how the sliding window protocol handles data transfer when a frame is corrupted.",
+            "Answers": [
+              {
+                "Text": "The sender sets a timeout for each frame sent. If a frame is missed, the receiver sends acknowledgments for the received frames and ignores the rest. The sender resends the missed frames after the timeout.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "The sender stops sending any frames and waits for the receiver to request the missed frames.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The receiver automatically requests the missed frames without waiting for the sender's timeout.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "The sender continues sending new frames without resending the missed frames.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 53,
+            "Question": "What is a collision in data communication and networking?",
+            "Answers": [
+              {
+                "Text": "A collision occurs when two or more nodes transmit frames simultaneously, causing interference.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A collision occurs when a node fails to transmit a frame due to a network error.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A collision occurs when a node receives multiple acknowledgments for the same frame.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A collision occurs when a node transmits a frame to an incorrect destination.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 54,
+            "Question": "How do nodes discover a collision in Ethernet and Wi-Fi?",
+            "Answers": [
+              {
+                "Text": "Ethernet uses CSMA/CD to detect collisions after they occur, while Wi-Fi uses CSMA/CA to avoid collisions before they happen.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Ethernet and Wi-Fi both use CSMA/CD to detect collisions after they occur.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Ethernet uses CSMA/CA to avoid collisions before they happen, while Wi-Fi uses CSMA/CD to detect collisions after they occur.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Ethernet and Wi-Fi both use CSMA/CA to avoid collisions before they happen.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 55,
+            "Question": "Explain TDM and FDM in a circuit-switched network.",
+            "Answers": [
+              {
+                "Text": "TDM divides time into frames and assigns time slots to connections, while FDM divides the frequency spectrum and assigns frequency bands to connections.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "TDM divides the frequency spectrum and assigns frequency bands to connections, while FDM divides time into frames and assigns time slots to connections.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Both TDM and FDM divide the frequency spectrum and assign frequency bands to connections.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Both TDM and FDM divide time into frames and assign time slots to connections.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 56,
+            "Question": "What advantage does a circuit-switched network have over a packet-switched network?",
+            "Answers": [
+              {
+                "Text": "A circuit-switched network can guarantee a certain amount of end-to-end bandwidth for the duration of a call.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A circuit-switched network is more efficient in handling bursty data traffic.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A circuit-switched network has lower latency compared to a packet-switched network.",
+                "IsCorrect": false
+              },
+              {
+                "Text": "A circuit-switched network is more scalable than a packet-switched network.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          }
+        ]
+      },
+      {
+        "Topic": "Error Detection and Network Basics",
+        "Questions": [
+          {
+            "Id": 57,
+            "Question": "Using CRC error detection, determine if the frame 11011011011 is correct or corrupted. The generator G(x) is 10101.",
+            "Answers": [
+              {
+                "Text": "Correct",
+                "IsCorrect": false
+              },
+              {
+                "Text": "Corrupted",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 58,
+            "Question": "What are the basic concepts of networks?",
+            "Answers": [
+              {
+                "Text": "Networks must be able to transfer data from one device to another with complete accuracy.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Networks must be able to transfer data from one device to another without any errors.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 59,
+            "Question": "Where are error detection and correction implemented in the OSI model?",
+            "Answers": [
+              {
+                "Text": "At the data link layer or the transport layer.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "At the network layer or the application layer.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 60,
+            "Question": "If data is sent at a rate of 1Kbps and exposed to noise for 0.005 seconds, how many bits can be affected?",
+            "Answers": [
+              {
+                "Text": "5 bits",
+                "IsCorrect": true
+              },
+              {
+                "Text": "10 bits",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 61,
+            "Question": "What is the throughput for a file transfer if the path has three links with rates R1 = 800 kbps, R2 = 2 Mbps, and R3 = 1.7 Mbps?",
+            "Answers": [
+              {
+                "Text": "800 kbps",
+                "IsCorrect": true
+              },
+              {
+                "Text": "2 Mbps",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 62,
+            "Question": "What is a collision at the data link layer?",
+            "Answers": [
+              {
+                "Text": "A collision happens when frames overlap over the network medium.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A collision happens when frames are lost in the network.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 63,
+            "Question": "Does the star topology require a hub at the center?",
+            "Answers": [
+              {
+                "Text": "No, it can also use a switch.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "Yes, it must have a hub.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          }
+        ]
+      },
+      {
+        "Topic": "TCP/IP and Network Modes",
+        "Questions": [
+          {
+            "Id": 64,
+            "Question": "What are the roles of the 'SYN' and 'ACK' flags during TCP connection establishment?",
+            "Answers": [
+              {
+                "Text": "SYN is used to synchronize counters, and ACK is used to acknowledge the receipt of a packet.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "SYN is used to terminate a connection, and ACK is used to establish a connection.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 65,
+            "Question": "Which mode, TDMA or FDMA, is more suitable if 3 nodes share the same communication medium of 150kbps and each node is continuously sending 50Kbps?",
+            "Answers": [
+              {
+                "Text": "TDMA",
+                "IsCorrect": false
+              },
+              {
+                "Text": "FDMA",
+                "IsCorrect": true
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 66,
+            "Question": "What is the fundamental difference between a router and a link-layer switch?",
+            "Answers": [
+              {
+                "Text": "A router forwards a packet based on the packet’s IP address, while a link-layer switch forwards a packet based on the packet’s MAC address.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A router forwards a packet based on the packet’s MAC address, while a link-layer switch forwards a packet based on the packet’s IP address.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Id": 67,
+            "Question": "Explain how the credit-based approach is used for TCP flow control.",
+            "Answers": [
+              {
+                "Text": "A requests B's permission to send a certain amount of data (credit). B grants a portion of the requested credit, and A starts sending messages. B acknowledges received messages and updates A's credit.",
+                "IsCorrect": true
+              },
+              {
+                "Text": "A sends data without requesting permission, and B acknowledges the data after receiving it.",
+                "IsCorrect": false
+              }
+            ],
+            "ImageReference": ""
+          },
+          {
+            "Topic": "Data Link Layer Functions",
+            "Questions": [
+              {
+                "Id": 68,
+                "Question": "How does the data link layer encapsulate network layer data into frames?",
+                "Answers": [
+                  {
+                    "Text": "The data link layer receives packets from the network layer and encapsulates them into frames by adding headers and trailers that contain control information.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The data link layer compresses the data and sends it directly to the physical layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 69,
+                "Question": "What methods are used to add headers and trailers to frames, and what information do they typically contain?",
+                "Answers": [
+                  {
+                    "Text": "Headers are added at the beginning of frames to include source and destination MAC addresses, while trailers may contain error-checking information such as CRC (Cyclic Redundancy Check).",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Headers and trailers are added randomly and contain no specific information.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 70,
+                "Question": "How does the data link layer determine the size of a frame, and what considerations are involved in this process?",
+                "Answers": [
+                  {
+                    "Text": "Frame size is determined based on the maximum transmission unit (MTU) of the underlying network, taking into account the need for sufficient header and trailer space while avoiding fragmentation.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Frame size is always fixed and does not consider the MTU.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 71,
+                "Question": "How does the data link layer control access to shared communication channels?",
+                "Answers": [
+                  {
+                    "Text": "The data link layer employs Medium Access Control (MAC) protocols, such as CSMA/CD or CSMA/CA, to manage access to shared channels and avoid collisions.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The data link layer allows all nodes to transmit simultaneously without any control.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 72,
+                "Question": "What role do MAC addresses play in identifying source and destination nodes in the headers of frames?",
+                "Answers": [
+                  {
+                    "Text": "MAC addresses uniquely identify network devices on the same local area network (LAN) and are used in frame headers to ensure that data is sent to the correct destination.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "MAC addresses are used to identify the type of data being transmitted.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 73,
+                "Question": "Can you explain how the link layer resolves contention when multiple nodes attempt to access the channel simultaneously?",
+                "Answers": [
+                  {
+                    "Text": "Contention is resolved using MAC protocols that dictate rules for channel access, such as waiting for a random backoff time before attempting to transmit again.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Contention is resolved by allowing the strongest signal to dominate.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 74,
+                "Question": "What mechanisms are in place to ensure reliable delivery between adjacent nodes, especially over wireless links with high error rates?",
+                "Answers": [
+                  {
+                    "Text": "Mechanisms such as acknowledgment (ACK) frames and retransmission requests are used to confirm successful frame delivery and ensure reliability.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "No mechanisms are in place; reliability is not a concern at the data link layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 75,
+                "Question": "How does the data link layer detect when a frame has not been received correctly?",
+                "Answers": [
+                  {
+                    "Text": "The data link layer uses error detection techniques like checksums or CRC to determine if a received frame is corrupted.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The data link layer assumes all frames are received correctly without any checks.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 76,
+                "Question": "What strategies does the data link layer use to manage retransmissions?",
+                "Answers": [
+                  {
+                    "Text": "Upon detecting an error, the receiving station sends a negative acknowledgment (NAK) back to the sender, prompting it to retransmit the affected frame.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The data link layer does not manage retransmissions; it relies on the network layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 77,
+                "Question": "How does the data link layer implement flow control to prevent data congestion?",
+                "Answers": [
+                  {
+                    "Text": "Flow control is implemented using mechanisms such as stop-and-wait, sliding window protocols, or credit-based systems to regulate the amount of data sent before needing an acknowledgment.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Flow control is not implemented at the data link layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 78,
+                "Question": "What techniques are used to ensure that slow receivers are not overwhelmed by fast senders?",
+                "Answers": [
+                  {
+                    "Text": "Techniques such as sliding windows and feedback mechanisms allow the sender to adjust the transmission rate based on the receiver's processing capability.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The data link layer does not consider the speed of the receiver.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 79,
+                "Question": "How are buffer sizes and flow control windows determined and managed at the data link layer?",
+                "Answers": [
+                  {
+                    "Text": "Buffer sizes and flow control windows are typically configured based on the expected network conditions and the capabilities of the devices involved, with dynamic adjustments possible.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Buffer sizes and flow control windows are fixed and cannot be adjusted.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 80,
+                "Question": "What hardware mechanisms are employed by the data link layer for error detection?",
+                "Answers": [
+                  {
+                    "Text": "Hardware mechanisms like checksums and CRC circuits are utilized to perform error detection on received frames at the data link layer.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Error detection is performed entirely by software at the network layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 81,
+                "Question": "How does the data link layer identify transmission errors caused by issues such as signal attenuation and noise?",
+                "Answers": [
+                  {
+                    "Text": "The data link layer analyzes the received frame against the computed error-checking information to identify discrepancies that indicate transmission errors.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The data link layer does not identify transmission errors; it relies on the physical layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 82,
+                "Question": "What actions does the receiver take when an error is detected in a received frame?",
+                "Answers": [
+                  {
+                    "Text": "When an error is detected, the receiver may request a retransmission of the corrupted frame or simply drop it, depending on the protocol in use.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The receiver ignores the error and processes the frame as if it were correct.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 83,
+                "Question": "What methods are used for error correction in the data link layer?",
+                "Answers": [
+                  {
+                    "Text": "Error correction can involve techniques like Forward Error Correction (FEC), where the sender includes redundant data, allowing the receiver to correct certain errors without needing retransmission.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Error correction is not performed at the data link layer.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 84,
+                "Question": "How does the receiver correct errors without requiring retransmission of the entire frame?",
+                "Answers": [
+                  {
+                    "Text": "The receiver uses the redundant data included in the original frame to identify and correct specific bit errors, allowing it to recover the original data without needing to ask for a resend.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "The receiver cannot correct errors without retransmission.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              },
+              {
+                "Id": 85,
+                "Question": "What are the advantages and limitations of error correction compared to error detection and retransmission?",
+                "Answers": [
+                  {
+                    "Text": "Error correction can improve efficiency by reducing the need for retransmissions, but it may introduce additional overhead due to the redundancy required and is limited in its ability to correct multiple errors.",
+                    "IsCorrect": true
+                  },
+                  {
+                    "Text": "Error correction has no advantages over error detection and retransmission.",
+                    "IsCorrect": false
+                  }
+                ],
+                "ImageReference": ""
+              }
             ]
           }
         ]
       }
-
-
-
     ]
   }
 ]

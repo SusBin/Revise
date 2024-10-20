@@ -47,7 +47,7 @@ namespace Revise.Pages.Test
 
             foreach (var questionId in answers.Keys)
             {
-                var question = _questionService.GetQuestionById(questionId);
+                var question = _questionService.GetQuestionById(courseId, questionId);
                 if (question != null)
                 {
                     Questions.Add(question);
@@ -126,6 +126,7 @@ namespace Revise.Pages.Test
             var result = new Result
             {
                 TestId = _resultService.GetNextTestId(),
+                CourseId = courseId,
                 Date = DateTime.Now,
                 ScorePercentage = scorePercentage,
                 IncorrectQuestions = incorrectQuestions

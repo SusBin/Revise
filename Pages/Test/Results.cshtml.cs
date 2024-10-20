@@ -33,7 +33,7 @@ namespace Revise.Pages.Test
                         var incorrectQuestionsForThisTest = new List<RevisionQuestion>();
                         foreach (var questionId in result.IncorrectQuestions.Keys)
                         {
-                            var question = _questionService.GetQuestionById(questionId);
+                            var question = _questionService.GetQuestionById(result.CourseId, questionId);
                             if (question != null)
                             {
                                 incorrectQuestionsForThisTest.Add(question);
